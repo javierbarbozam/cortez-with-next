@@ -1,7 +1,7 @@
-// layout.js
 import { Providers } from './providers';
 import { Inter } from 'next/font/google';
-import Footer from './footer'; // Asegúrate de importar correctamente Footer
+import Header from './header';
+import Footer from './footer';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -16,11 +16,16 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={inter.className}>
                 <Providers>
-                    {children}
-                    <Footer /> {/* Agrega el componente Footer dentro del layout */}
-                    <div></div>
+                    <Header />
+                    <div style={{  width: '100%', height: '5px', backgroundColor: '#FFE047' }}>
+                        {children}
+                    </div>
+                    <Footer />
+                    <div style={{ fontSize: '10px', width: '100%', height: '30px', color: 'white', backgroundColor: '#1F2A2D' }}>
+                        <p>Terminos y condiciones</p>
+                    </div>
                 </Providers>
             </body>
         </html>
-    )
+    );
 }
