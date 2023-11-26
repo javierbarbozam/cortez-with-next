@@ -9,11 +9,23 @@ const { definePartsStyle } =
 export const theme = extendTheme({
   colors: {
     primary: {
-      500: '#F5C71A'
+      500: '#2F5356'
     },
     secondary: {
       900: '#3F5B5F'
     }
+  },
+  styles: {
+    global: {
+      'footer': {
+        backgroundColor: 'primary.500',
+        color: 'white',
+        width: '100%', // Ancho al 100% del contenedor
+        height: '120px', // Ajusta el alto del footer según sea necesario
+        // Puedes añadir más estilos aquí según tus necesidades
+        // por ejemplo, padding, margen, alineación, etc.
+      },
+    },
   },
   components: {
     Card: {
