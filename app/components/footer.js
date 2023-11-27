@@ -4,14 +4,15 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <Box
-    as="footer"
-    position="relative"
-    bgImage="url('/footerImg/leaves-bg.png')" // Asegúrate de agregar comillas alrededor de la URL
-    bgSize="cover"
-    bgPosition="center"
-    bgRepeat="no-repeat"
-    py={8}
-  >
+      as="footer"
+      position="relative"
+      bgImage="url('/footerImg/leaves-bg.png')" // Ruta de la imagen de fondo
+      bgSize="70%" 
+      color="white"
+      width="100%"
+      height="120px"
+      margin="0px" // Establece los márgenes en píxeles
+    >/ 
       <Flex alignItems="center">
         <Image
           src="/footerImg/app-store.png"
@@ -21,7 +22,7 @@ const Footer = () => {
           style={{ position: "absolute", left: "15%", top: "40%" }}
         />
         <Image
-          src="/footerImg/YellowLogo.png"
+          src="/footerImg/LogoBlue.png"
           alt="Yellow Logo"
           width={95}
           height={88}
