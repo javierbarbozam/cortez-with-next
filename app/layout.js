@@ -1,10 +1,4 @@
-import { Providers } from './providers';
-import { Inter } from 'next/font/google';
-import Header from './header';
-import Footer from './footer';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import { Providers } from './providers'
 
 export const metadata = {
     title: 'Create Next App',
@@ -12,9 +6,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-            <body className={inter.className}>
+  return (
+    <html lang="en">
+      <body>
                 <Providers>
                     <Header />
                     <div style={{  width: '100%', height: '5px', backgroundColor: '#FFE047' }}>
@@ -26,6 +20,6 @@ export default function RootLayout({ children }) {
                     </div>
                 </Providers>
             </body>
-        </html>
-    );
+    </html>
+  )
 }
