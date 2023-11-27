@@ -1,8 +1,7 @@
-
 export default function Home() {
   return (
     <main>
-      <p>Hello word!</p>
+      <p>hello</p>
     </main>
   )
 }
