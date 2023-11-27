@@ -1,10 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-import { cardAnatomy } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
-
-const { definePartsStyle } =
-  createMultiStyleConfigHelpers(cardAnatomy.keys)
-
 
 export const theme = extendTheme({
   colors: {
