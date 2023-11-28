@@ -4,5 +4,5 @@ export default function Home() {
     <main>
       <p>Hello word!</p>
     </main>
-  )
+  );
 }
