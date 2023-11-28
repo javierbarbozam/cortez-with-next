@@ -3,7 +3,7 @@ import { cardAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 import { colors } from "./theme/foundations/colors";
 import { fonts } from "./theme/foundations/fonts";
-import { headingTheme } from "./theme/components/Heading";
+import { Button } from "./theme/components/Button";
 
 const { definePartsStyle } = createMultiStyleConfigHelpers(cardAnatomy.keys);
 
@@ -14,11 +14,11 @@ export const theme = extendTheme({
     global: {
       body: {
         fontFamily: fonts.questrial,
+        bg: 'background'
       },
     },
   },
   components: {
-    Heading: { headingTheme },
     Card: {
       baseStyle: {},
       variants: {
@@ -30,39 +30,6 @@ export const theme = extendTheme({
         }),
       },
     },
-    Button: {
-      baseStyle: {
-        fontFamily: fonts.kg_blank,
-        fontWeight: "bold",
-      },
-      sizes: {
-        xl: {
-          h: "56px",
-          fontSize: "lg",
-          px: "32px",
-        },
-      },
-      variants: {
-        "with-shadow": {
-          bg: "red.400",
-          boxShadow: "0 0 2px 2px #efdfde",
-        },
-        solid: {
-          bg: "secondary",
-          color: "primary",
-        },
-        // 5. We can add responsive variants
-        sm: {
-          bg: "teal.500",
-          fontSize: "md",
-        },
-      },
-      // 6. We can overwrite defaultProps
-      defaultProps: {
-        // size: 'md', // default is md
-        // variant: 'sm', // default is solid
-        // colorScheme: 'green', // default is gray
-      },
-    },
+    Button
   },
 });
