@@ -14,7 +14,7 @@ export const theme = extendTheme({
     global: {
       body: {
         fontFamily: fonts.questrial,
-        bg: 'background'
+        bg: "background",
       },
     },
   },
@@ -30,6 +30,6 @@ export const theme = extendTheme({
         }),
       },
     },
-    Button
+    Button,
   },
 });
