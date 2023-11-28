@@ -17,18 +17,27 @@ const Header = () => {
           alt="logo blanco"
           width={75}
           height={78}
-          mr={4} // Agrega margen a la derecha para separar la imagen del contenido
-          mt={5} // Agrega margen superior para posicionar la imagen
+          mr={4} 
+          mt={5} n
         />
         <nav style={{ marginLeft: "auto" }}>
           <NextLink href="/" passHref>
             <Link mr={4} mt={5}>
-              Sobre nosotros
+              inicio
+            </Link>
+          </NextLink>
+          <NextLink href="/" passHref>
+            <Link mr={4} mt={5}>
+              sobre nosotros
             </Link>
           </NextLink>
           <NextLink href="/" passHref>
             <Link mr={4} mt={5}>
               Metodologia
+            </Link>
+          </NextLink>          <NextLink href="/" passHref>
+            <Link mr={4} mt={5}>
+              contacto
             </Link>
           </NextLink>
         </nav>
