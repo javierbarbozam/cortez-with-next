@@ -18,7 +18,7 @@ export default function Home() {
       <Link as={NextLink} href="./nosotros">Sobre Nosotros</Link>
       <Link as={NextLink} href="./contacto">Contacto</Link>
       <Link as={NextLink} href="./metodologia">Metodología</Link>
-      <Link href="./[books]/page.js">Nos Conocemos</Link>
+      <Link href="./libros/nos-conocemos">Nos Conocemos</Link>
     </main>
   );
 }
