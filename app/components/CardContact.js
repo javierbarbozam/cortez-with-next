@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, Heading, Grid, GridItem, Flex, Box } from '@chakra-ui/react';
+import { Card, Heading, Grid, GridItem, Box } from '@chakra-ui/react';
 import Link from 'next/link'
 import { Instagram, Facebook } from './instagramIcon';
 import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
