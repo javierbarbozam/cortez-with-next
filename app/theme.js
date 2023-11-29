@@ -19,11 +19,6 @@ export const theme = extendTheme({
   breakpoints,
   colors,
   fonts,
-  color: {
-    custom: {
-      footer: '#FCED8C',
-    },
-  },
   styles: {
     global: {
       body: {
@@ -31,13 +26,13 @@ export const theme = extendTheme({
         bg: "background",
       },
       'footer': {
-        backgroundColor: 'custom.footer',
+        backgroundColor: 'footer',
         color: 'white',
         width: '100%',
         height: '120px',
       },
       'header': {
-        backgroundColor: 'primary.500',
+        backgroundColor: 'primary',
         color: 'white',
         width: '100%',
         height: '80px',
