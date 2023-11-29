@@ -1,6 +1,8 @@
+import { Text } from "@chakra-ui/react";
+
 export const Doman = () => {
   return (
-    <p>
+    <Text>
       El método Doman, aboga por la estimulación temprana y el desarrollo
       cognitivo en niños, Cortez Amarillo con esto ofrece una experiencia
       educativa que integra magistralmente la tradición con la innovación. Glenn
@@ -10,6 +12,6 @@ export const Doman = () => {
       esencia de Cortez Amarillo, donde las páginas no solo están bellamente
       ilustradas, sino que también se han diseñado con elementos interactivos
       para una mejor lectura
-    </p>
+    </Text>
   );
 };
