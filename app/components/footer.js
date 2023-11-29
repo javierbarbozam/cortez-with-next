@@ -8,57 +8,68 @@ const Footer = () => {
     <Box
       as="footer"
       position="relative"
-      bgImage="url('/footerImg/leaves-bg.png')" // Ruta de la imagen de fondo
-      bgSize="70%" 
+      bgImage="url('/footerImg/leaves-bg.png')"
+      bgSize="cover"
       color="white"
       width="100%"
       height="120px"
       margin="0px" // Establece los márgenes en píxeles
     >
-      <Flex justifyContent="space-around" alignItems="center">
-        <Image
-          src="/footerImg/app-store.png"
-          alt="App Store"
-          width={95}
-          height={88}
-        />
-        <Image
-          src="/footerImg/LogoBlue.png"
-          alt="Yellow Logo"
-          width={95}
-          height={88}
-        />
-        <Flex display="flex">
-          <Image
-            src="/footerImg/facebook.png"
-            alt="Vector 2"
-            width={20}
-            height={35}
-            style={imageStyle} // Aplica el estilo de margen a la imagen
+        <Flex 
+        justifyContent="space-around"
+          alignItems="center"
+          >
+        
+        <Box maxW={{ base: "85px", md: "85px" }} width="100%"> 
+          <Image 
+            src="/footerImg/app-store.png"
+            alt="App Store"
+            width={95}
+            height={88}
+            layout="responsive"
           />
-          <Image
-            src="/footerImg/instagram.png"
-            alt="Vector 3"
-            width={20}
-            height={35}
-            style={imageStyle} // Aplica el estilo de margen a la imagen
+        </Box>
+        <Box maxW={{ base: "85px", md: "85px" }} width="100%">
+          <Image 
+            src="/footerImg/LogoBlue.png"
+            alt="Yellow Logo"
+            width={95}
+            height={88}
+            layout="responsive" 
           />
-          <Image
-            src="/footerImg/phone.png"
-            alt="Vector 4"
-            width={20}
-            height={35}
-            style={imageStyle} // Aplica el estilo de margen a la imagen
-          />
-          <Image
-            src="/footerImg/gmail.png"
-            alt="Vector 4"
-            width={20}
-            height={35}
-            style={imageStyle} // Aplica el estilo de margen a la imagen
-          />
+        </Box>
+        
+          <Flex display="flex"> 
+            <Image
+              src="/footerImg/facebook.png"
+              alt="Vector 2"
+              width={20}
+              height={35}
+              style={imageStyle} 
+            />
+            <Image
+              src="/footerImg/instagram.png"
+              alt="Vector 3"
+              width={20}
+              height={35}
+              style={imageStyle} 
+            />
+            <Image
+              src="/footerImg/phone.png"
+              alt="Vector 4"
+              width={20}
+              height={35}
+              style={imageStyle} 
+            />
+            <Image
+              src="/footerImg/gmail.png"
+              alt="Vector 4"
+              width={20}
+              height={35}
+              style={imageStyle} 
+            />
+          </Flex>
         </Flex>
-      </Flex>
     </Box>
   );
 };

@@ -56,16 +56,17 @@ const Header = () => {
           </nav>
 
         </Flex>
-          <IconButton
-          color={"white"}
-          ml='150px'
-          aria-label="open menu"
-          size="lg"
-          mr={2}
-          icon={<HamburgerIcon/>}
-          display={['flex', 'flex','none', 'none']}
-          onClick={() => changeDisplay('flex')}
-          />
+        <IconButton
+        color="white"
+        ml={2}
+        aria-label="open menu"
+        size="lg"
+        icon={<HamburgerIcon />}
+        display={['flex', 'flex', 'none', 'none']}
+        onClick={() => changeDisplay('flex')}
+        position="absolute"
+        left='80%'
+      />
       </Flex>
       <Flex
           w='322px'
