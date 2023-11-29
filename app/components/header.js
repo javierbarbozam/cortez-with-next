@@ -6,6 +6,7 @@ import { Box, CloseButton, Flex, IconButton, Link } from "@chakra-ui/react";
 import { useState } from "react";
 import Image from "next/image";
 import NextLink from "next/link";
+import { color } from "framer-motion";
 
 const Header = () => {
   const [display, changeDisplay] = useState('none')
@@ -69,16 +70,20 @@ const Header = () => {
       />
       </Flex>
       <Flex
-          w='322px'
-          h= '200px'
-          bgColor="gray.50"
-          zIndex={20}
-          pos="fixed"
-          top="0"
-          left="0"
-          overflow="auto"
-          flexDir="column"
-          display={display}
+        w={['222px', '322px']}
+        h='200px'
+        bgColor="gray.50"
+        zIndex={20}
+        pos="fixed"
+        top="0"
+        right="0" 
+        overflow="auto"
+        flexDir="column"
+        display={display}
+        borderRadius="15px" 
+        borderColor="yellow.400" 
+        borderWidth="2px" 
+        borderStyle="solid" 
       >
         <Flex justify="flex-end">
           <IconButton
@@ -86,7 +91,9 @@ const Header = () => {
           mr={2}
           aria-label="close menu"
           size="ig"
+          color="red.500"
           icon={
+            
             <CloseButton/>
           }
           onClick={() => changeDisplay('none')}
