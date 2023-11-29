@@ -6,5 +6,5 @@ export default function Home() {
       <Form />
       <p>Hello word!</p>
     </main>
-  )
+  );
 }
