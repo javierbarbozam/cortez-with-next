@@ -14,7 +14,7 @@ export const books = [
 export const methodologyTitles = (current) => {
   const data = {
     doman: 'Explora nuestro método de enseñanza: Aprende sobre el Método Doman',
-    reality: 'Lectura que Cobre Vida: Descubre la Realidad Aumentada',
+    reality: 'Lectura que cobra vida: Descubre la Realidad Aumentada',
   }
   return data[current]
 };
