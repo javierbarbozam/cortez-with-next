@@ -13,15 +13,15 @@ const Footer = () => {
       color="white"
       width="100%"
       height="120px"
-      margin="0px"
+      margin="0px" // Establece los márgenes en píxeles
     >
       <Flex justifyContent="space-around" alignItems="center">
-      <Image
-      src="/footerImg/app-store.png"
-      alt="App Store"
-      boxSize={{ base: "60px", sm: "80px", md: "95px", lg: "110px", xl: "120px" }}
-      objectFit="cover" // Esto mantiene la relación de aspecto sin distorsionar la imagen
-    />
+        <Image
+          src="/footerImg/app-store.png"
+          alt="App Store"
+          width={95}
+          height={88}
+        />
         <Image
           src="/footerImg/LogoBlue.png"
           alt="Yellow Logo"
