@@ -13,7 +13,7 @@ const CardApp = () => {
     >
       <Box ml="20px">
         <CardBody>
-          <Heading fontSize="30px" mb="15px">Descarga nuestra APP</Heading>
+          <Heading mb="15px">Descarga nuestra APP</Heading>
           <Text py='2' fontSize="20px" mb="-25px">
             Sumérgete en el mundo colorido de los 
             animales costarricenses con nuestra aplicación, la cual fusiona la lectura con 

@@ -20,8 +20,8 @@ const CardImgLeft = () => {
       />
       <Box>
         <CardBody>
-          <Heading fontsize="30px" mb="15px">Explora nuestro método de enseñanza</Heading>
-          <Text py='2px' fontsize="20px" mb="-25px">
+          <Heading mb="15px">Explora nuestro método de enseñanza</Heading>
+          <Text py='2px' fontSize="20px" mb="-25px">
             La Etapa 4 del Método Doman se enfoca en enseñar 
             la lectura a niños pequeños a través de tarjetas de palabras, 
             ayudándoles a reconocer y leer palabras y frases temprano en su desarrollo.

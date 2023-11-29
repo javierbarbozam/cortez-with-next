@@ -18,7 +18,7 @@ const AboutBookCard = () => {
       />
       <Box>
         <CardBody>
-          <Heading fontSize="30px" mb="15px">Sobre el libro</Heading>
+          <Heading mb="15px">Sobre el libro</Heading>
           <Text py='2px' fontSize="18px" mb="-25px">
             En este libro, te invitamos a un emocionante recorrido por la vida 
             salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus 

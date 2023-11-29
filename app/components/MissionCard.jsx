@@ -20,8 +20,8 @@ const MissionCard = () => {
           opacity={0.7}
         />
         <Box mt='6' spacing='3'>
-          <Heading fontsize="30px" mb="15px">Nuestra Misión</Heading>
-          <Text fontsize="20px">
+          <Heading mb="15px">Nuestra Misión</Heading>
+          <Text fontSize="20px">
             En Cortez Amarillo, inspiramos a los niños a través de 
             recursos educativos innovadores, fomentando la pasión por 
             la lectura y la alfabetización en todos los rincones.

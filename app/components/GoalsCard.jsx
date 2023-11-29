@@ -11,9 +11,9 @@ const GoalsCard = () => {
       color="#394d51" 
     >
       <CardBody>
-        <Heading fontsize="30px" mb="15px" textAlign="center">Objetivos</Heading>
+        <Heading mb="15px" textAlign="center">Objetivos</Heading>
         <Box mt='6' spacing='3' display="flex" alignItems="center" justifyContent="space-evenly" >
-          <Text fontsize="20px" w="400px">
+          <Text fontSize="20px" w="400px">
             Buscar constantemente nuevas formas creativas de enseñar a leer, ya 
             sea a través de libros, juegos interactivos, aplicaciones o programas 
             educativos adaptados a las necesidades y preferencias de los niños.
