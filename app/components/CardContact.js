@@ -1,22 +1,26 @@
-import { Card, Box, Heading, Grid, GridItem } from '@chakra-ui/react';
+'use client'
+
+import { Card, Heading, Grid, GridItem, Flex, Box } from '@chakra-ui/react';
 import Link from 'next/link'
+import { Instagram, Facebook } from './instagramIcon';
+import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 
 const socialMedia = [
-  { icon: '', title: 'cortezamarillo_cr', link: 'https://www.instagram.com/cortezamarillo_cr/' },
-  { icon: '', title: 'CortezAmarillo', link: '' },
-  { icon: '', title: '8838-1532', link: '' },
-  { icon: '', title: 'CortezAmarillo', link: 'mailto:hola@cortezamarillo-cr.com' }
+  { icon: <Instagram />, title: 'cortezamarillo_cr', link: 'https://www.instagram.com/cortezamarillo_cr/' },
+  { icon: <Facebook />, title: 'CortezAmarillo', link: '' },
+  { icon: <PhoneIcon w='42px' h='42px'/>, title: '8838-1532', link: '' },
+  { icon: <EmailIcon w='42px' h='42px'/>, title: 'CortezAmarillo', link: 'mailto:hola@cortezamarillo-cr.com' }
 ];
 
 export default function Contact() {
   return (
-    <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: '', md: 'repeat(2, 1fr)' }} gap='30px' maxW='1020px' m='20px'>
+    <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: '', md: 'repeat(2, 1fr)' }} gap='30px' maxW='1020px' m='20px' w={{ base: '281px', sm: '320px', md: '358px' }}>
       {socialMedia.map((network, index) => (
         <GridItem key={index}>
-          <Link href={network.link}>
-            <Card w={{ base: '281px', sm: '320px', md: '358px' }} h='177px' p='30px'>
-              {/* <Image src={network.icon} alt='' /> */}
-              <Heading fontSize='20px' textAlign='center'>{network.title}</Heading>
+          <Link href={network.link} textAlign='center'>
+            <Card w={{ base: '281px', sm: '320px', md: '358px' }} h='177px' p='30px' flexDirection='column' textAlign='center' gap='30px'>
+              <Box>{network.icon}</Box>
+              <Heading fontSize='20px'>{network.title}</Heading>
             </Card>
           </Link>
         </GridItem>
