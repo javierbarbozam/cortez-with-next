@@ -14,7 +14,6 @@ const kg_blank = localFont({
 
 
 export const fonts = {
-  heading: kg_blank.style.fontFamily,
   kg_blank: kg_blank.style.fontFamily,
   questrial: questrial.style.fontFamily,
 };
