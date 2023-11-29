@@ -13,14 +13,7 @@ import {
 import { useState } from "react";
 import { Doman } from "./components/doman";
 import { Reality } from "./components/reality";
-
-const title = (current) => {
-  const data = {
-    doman: 'Explora nuestro método de enseñanza: Aprende sobre el Método Doman',
-    reality: 'Lectura que Cobre Vida: Descubre la Realidad Aumentada',
-  }
-  return data[current]
-};
+import { methodologyTitles } from "../utils/config";
 
 export default function Methodology() {
   const [currentTab, setCurrentTab] = useState('reality')
@@ -34,7 +27,7 @@ export default function Methodology() {
       <Link as={NextLink} href="/">
         Home
       </Link>
-      <Heading>{title(currentTab)}</Heading>
+      <Heading>{methodologyTitles(currentTab)}</Heading>
       <Tabs onChange={() => {titleChange()}}>
         <TabList>
           <Tab>Realidad Aumentada</Tab>
