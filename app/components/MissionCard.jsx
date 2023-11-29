@@ -1,8 +1,15 @@
-import { Card, Text, Heading, Image, Box, CardBody, CardFooter, Button, Flex } from '@chakra-ui/react';
+import { Card, Text, Heading, Image, Box, CardBody} from '@chakra-ui/react';
 
 const MissionCard = () => {
   return(
-    <Card maxW='sm' boxShadow='lg' mt="100px" mb="100px" mx="auto" color="#394d51">
+    <Card 
+      maxW='sm' 
+      boxShadow='lg' 
+      mt="100px" 
+      mb="100px" 
+      mx="auto" 
+      color="#394d51" 
+    >
       <CardBody>
         <Image
           src='/images/img-método-enseñanza.jpg'
