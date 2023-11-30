@@ -3,17 +3,18 @@ import { Card, Text, Heading, Image, Box, CardBody} from '@chakra-ui/react';
 const GoalsCard = () => {
   return(
     <Card 
-      w="815px"
-      boxShadow='lg' 
-      mt="100px" 
-      mb="100px" 
-      mx="auto" 
-      color="#394d51" 
+    w={{ base: '90%', sm: '800px' }}
+    h="360px"
+    boxShadow='lg'
+    mt={{ base: '50px', sm: '100px' }}
+    mb="100px"
+    mx="auto"
+    alignItems="center"
     >
       <CardBody>
-        <Heading mb="15px" textAlign="center">Objetivos</Heading>
-        <Box mt='6' spacing='3' display="flex" alignItems="center" justifyContent="space-evenly" >
-          <Text fontSize="20px" w="400px">
+        <Heading fontSize={{ base: '22px', sm: '26px' }} mb={{ base: '10px', sm: '15px' }} textAlign="center" mt="10px">Objetivos</Heading>
+        <Box display={{ base: 'flow', sm: 'flex' }} alignItems={{ base: 'center', sm: 'center' }} spacing='6px'>
+          <Text fontSize={{ base: '15px', sm: '17px' }} mb="25px" ml="10px" w="100%">
             Buscar constantemente nuevas formas creativas de enseñar a leer, ya 
             sea a través de libros, juegos interactivos, aplicaciones o programas 
             educativos adaptados a las necesidades y preferencias de los niños.
@@ -21,9 +22,10 @@ const GoalsCard = () => {
           <Image
             src='/images/img-método-enseñanza.jpg'
             alt=''
-            w="270px"
-            h="190px"
-            borderRadius="15px"
+            p={{ base: '15px', sm: '15px' }}
+            w={{ base: '100%', sm: '370px' }}
+            h={{ base: '100%', sm: '270px' }}
+            borderRadius={{ base: '5px', sm: '20px' }}
             opacity={0.7}
           />
         </Box>

@@ -1,35 +1,34 @@
-import { Card, Text, Heading, Image, Box, CardBody} from '@chakra-ui/react';
+import { Card, Text, Heading, Image, Box, CardBody } from '@chakra-ui/react';
 
 const MissionCard = () => {
-  return(
-    <Card 
-      maxW='sm' 
-      boxShadow='lg' 
-      mt="100px" 
-      mb="100px" 
-      mx="auto" 
-      color="#394d51" 
+  return (
+    <Card
+      maxW={{ base: '90%', sm: 'sm' }}
+      boxShadow='lg'
+      mt={{ base: '50px', sm: '100px' }}
+      mb="100px"
+      mx="auto"
     >
       <CardBody>
-        <Image
-          src='/images/img-método-enseñanza.jpg'
-          alt=''
-          w="370px"
-          h="255px"
-          borderRadius="20px"
-          opacity={0.7}
-        />
-        <Box mt='6' spacing='3'>
-          <Heading mb="15px">Nuestra Misión</Heading>
-          <Text fontSize="20px">
-            En Cortez Amarillo, inspiramos a los niños a través de 
-            recursos educativos innovadores, fomentando la pasión por 
+      <Image
+        p={{ base: '5px', sm: '5px' }} // Eliminar el relleno en pantallas pequeñas
+        w={{ base: '100%', sm: '370px' }}
+        src='/images/img-método-enseñanza.jpg'
+        alt=''
+        borderRadius={{ base: '5px', sm: '15px' }}
+        opacity={0.7}
+      />
+        <Box mt={{ base: '10px', sm: '15px' }} spacing='3'>
+          <Heading fontSize={{ base: '22px', sm: '26px' }} mb="15px">Nuestra Misión</Heading>
+          <Text fontSize={{ base: '15px', sm: '17px' }}>
+            En Cortez Amarillo, inspiramos a los niños a través de
+            recursos educativos innovadores, fomentando la pasión por
             la lectura y la alfabetización en todos los rincones.
           </Text>
         </Box>
       </CardBody>
     </Card>
-  )
+  );
 }
 
-export default MissionCard
+export default MissionCard;

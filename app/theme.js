@@ -4,6 +4,7 @@ import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 import { colors } from "./theme/foundations/colors";
 import { fonts } from "./theme/foundations/fonts";
 import { Button } from "./theme/components/Button";
+import { Heading } from "./theme/components/Heading";
 
 const { definePartsStyle } = createMultiStyleConfigHelpers(cardAnatomy.keys);
 
@@ -29,12 +30,14 @@ export const theme = extendTheme({
           },
         }),
       },
-    },
-    Button,
-    Heading: {
-      baseStyle: {
-        fontSize: { base: "20px", sm: "25px", md: "30px" }, 
+      // 6. We can overwrite defaultProps
+      defaultProps: {
+        size: 'md', // default is md
+        // variant: 'sm', // default is solid
+        // colorScheme: 'green', // default is gray
       },
     },
+    Button,
+    Heading
   },
 });
