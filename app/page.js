@@ -1,8 +1,9 @@
+import BookBanner from "./components/BookBanner";
 
 export default function Home() {
   return (
     <main>
-      <p>Hello word!</p>
+      <BookBanner/>
     </main>
   );
 }
