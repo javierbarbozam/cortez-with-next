@@ -11,7 +11,7 @@ const MissionCard = () => {
     >
       <CardBody>
       <Image
-        p={{ base: '5px', sm: '5px' }} // Eliminar el relleno en pantallas pequeñas
+        p={{ base: '5px', sm: '5px' }}
         w={{ base: '100%', sm: '370px' }}
         src='/images/img-método-enseñanza.jpg'
         alt=''

@@ -24,7 +24,7 @@ const CardApp = () => {
         <CardFooter>
           <Button
             backgroundColor="#334346"
-            w={{ base: '190px', sm: '210px' }} // Ajustar el ancho del botón para pantallas pequeñas
+            w={{ base: '190px', sm: '210px' }}
             h="65px"
             _hover={{ backgroundColor: '#3B6D71' }}
           >

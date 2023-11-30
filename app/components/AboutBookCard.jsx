@@ -4,16 +4,16 @@ const AboutBookCard = () => {
   return (
     <Card
       direction={{ base: 'column', sm: 'row' }}
-      w={{ base: '90%', sm: '815px' }} // Ajustar el ancho para pantallas pequeñas
+      w={{ base: '90%', sm: '815px' }}
       boxShadow='lg'
-      mt={{ base: '50px', sm: '100px' }} // Ajustar el margen superior para pantallas pequeñas
-      mb={{ base: '40px', sm: '60px' }} // Ajustar el margen inferior para pantallas pequeñas
+      mt={{ base: '50px', sm: '100px' }}
+      mb={{ base: '40px', sm: '60px' }} 
       mx="auto"
       color="#394d51"
       alignItems="center"
     >
       <Image
-        w={{ base: '100%', sm: '400px' }} // Ajustar el ancho de la imagen para pantallas pequeñas
+        w={{ base: '100%', sm: '400px' }}
         src='/images/libro-animalescr.png'
         alt=''
       />
