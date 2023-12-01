@@ -17,4 +17,4 @@ const variants = {
   content: content,
 };
 
-export const tabsTheme = defineMultiStyleConfig({ variants });
+export const tabsVariants = defineMultiStyleConfig({ variants });

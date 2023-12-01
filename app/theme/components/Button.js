@@ -7,6 +7,9 @@ export const Button = defineStyleConfig({
     borderRadius: 'base',
     _hover: {
       transform: "scale(1.05, 1.05)"
+    },
+    _active: {
+      bg: 'transparent'
     }
   },
   variants: {
