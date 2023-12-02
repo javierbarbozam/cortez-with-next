@@ -7,7 +7,6 @@ export default function AboutUs() {
   return (
     <main>
       <Heading>Contacto</Heading>
-      <Link as={NextLink} href="/">Home</Link>
       <Contact />
       <Form />
     </main>

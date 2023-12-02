@@ -5,7 +5,6 @@ export default function AboutUs() {
   return (
     <main>
       <Heading>Im About Us</Heading>
-      <Link as={NextLink} href="/">Home</Link>
     </main>
   );
 }
