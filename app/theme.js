@@ -19,6 +19,15 @@ export const theme = extendTheme({
         fontFamily: fonts.questrial,
         bg: "background",
       },
+      header: {
+        bg: 'primary',
+        py: ['4','6','10'],
+        display: 'flex',
+        aligItems: 'center',
+        justifyContent: 'space-between',
+        borderBottom: ['6px solid', '6px solid','8px solid'],
+        borderBottomColor: ['secondary.normal', 'secondary.normal', 'secondary.normal']
+      }
     },
   },
   components: {
