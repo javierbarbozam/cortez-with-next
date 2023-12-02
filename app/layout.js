@@ -1,5 +1,5 @@
 import { Providers } from "./providers";
-import { Header } from "./components/Header";
+import { HeaderNav } from "./components/HeaderNav";
 
 export const metadata = {
   title: "Cortez Amarillo",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers>
-          <Header />
+          <HeaderNav />
           {children}
         </Providers>
       </body>
