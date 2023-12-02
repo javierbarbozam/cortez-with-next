@@ -63,7 +63,7 @@ const MobileNav = () => {
         bottom="0"
         right="0"
         bg="black"
-        opacity="0.8"
+        opacity="0.6"
         display={modalDisplay}
       />
       <Box
@@ -81,6 +81,8 @@ const MobileNav = () => {
         right="0"
         px="6"
         pt="6"
+        borderLeft= '6px solid'
+        borderLeftColor= 'secondary.normal'
       >
         <IconButton
           onClick={() => {
