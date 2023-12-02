@@ -30,7 +30,7 @@ const NavBar = ({ customEvent }) => {
 
 const DesktopNav = () => {
   return (
-    <Box as='nav' display={["none", "none", "flex"]} gap="4">
+    <Box as="nav" display={["none", "none", "flex"]} gap="4">
       <NavBar />
     </Box>
   );
@@ -42,6 +42,7 @@ const MobileNav = () => {
   return (
     <>
       <IconButton
+        color="white"
         display={["block", "block", "none"]}
         onClick={() => {
           toggleBodyOverflow();
