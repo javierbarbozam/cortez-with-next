@@ -15,22 +15,23 @@ const Header = () => {
       as="header"
       borderBottom="1px solid #eaeaea"
       py={4}
-      px={6}
+      px={9}
+      height="100px"
       position="relative"
     >
-      <Flex alignItems="center">
+      <Flex
+      ml="15px"
+      >
         <Image
           src="/footerImg/LogoBlanco.png"
           alt="logo blanco"
-          width={75}
-          height={78}
-          mr={4}
-          mt={5}
+          width={70}
+          height={50} // Establece el ancho en 300 píxeles
         />
         <Flex
           pos="fixed"
-          top="1rem"
-          right="1rem"
+          top="2rem"
+          right="3rem"
           display={['none', 'none', 'flex', 'flex']} // Ocultar en resoluciones menores
         >
           <nav style={{ marginLeft: "auto" }}>
