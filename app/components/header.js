@@ -22,12 +22,16 @@ const Header = () => {
       <Flex
       ml="15px"
       >
-        <Image
-          src="/footerImg/LogoBlanco.png"
-          alt="logo blanco"
-          width={70}
-          height={50} // Establece el ancho en 300 píxeles
-        />
+  <NextLink href="/">
+      <Image
+        src="/footerImg/LogoBlanco.png"
+        alt="logo blanco"
+        width={70}
+        height={50}
+      />
+  </NextLink>
+
+
         <Flex
           pos="fixed"
           top="2rem"
@@ -40,7 +44,7 @@ const Header = () => {
                 Inicio
               </Link>
             </NextLink>
-            <NextLink href="/libros/page.js" passHref>
+            <NextLink href="/libros" passHref>
               <Link mr={4} mt={5}>
                 sobre nosotros
               </Link>
