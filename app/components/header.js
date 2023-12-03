@@ -40,7 +40,7 @@ const Header = () => {
                 Inicio
               </Link>
             </NextLink>
-            <NextLink href="/" passHref>
+            <NextLink href="/libros/page" passHref>
               <Link mr={4} mt={5}>
                 sobre nosotros
               </Link>
