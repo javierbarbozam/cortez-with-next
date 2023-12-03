@@ -40,17 +40,17 @@ const Header = () => {
                 Inicio
               </Link>
             </NextLink>
-            <NextLink href="/libros/page" passHref>
+            <NextLink href="/libros/page.js" passHref>
               <Link mr={4} mt={5}>
                 sobre nosotros
               </Link>
             </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/metodologia" passHref>
               <Link mr={4} mt={5}>
                 Metodologia
               </Link>
             </NextLink>
-            <NextLink href="/" passHref>
+            <NextLink href="/contacto" passHref>
               <Link mr={4} mt={5}>
                 contacto
               </Link>
@@ -113,17 +113,17 @@ const Header = () => {
               Inicio
             </Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/libros/page.js" passHref>
             <Link mr={4} mt={5} color="black" style={{ marginTop: '10px' }}>
               Sobre nosotros
             </Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/metodologia" passHref>
             <Link mr={4} mt={5} color="black" style={{ marginTop: '10px' }}>
               Metodología
             </Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/contacto" passHref>
             <Link mr={4} mt={5} color="black" style={{ marginTop: '10px' }}>
               Contacto
             </Link>
