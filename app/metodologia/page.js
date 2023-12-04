@@ -28,7 +28,7 @@ export default function Methodology() {
         Home
       </Link>
       <Heading>{methodologyTitles(currentTab)}</Heading>
-      <Tabs onChange={() => {titleChange()}}>
+      <Tabs variant='content' isLazy onChange={() => {titleChange()}}>
         <TabList>
           <Tab>Realidad Aumentada</Tab>
           <Tab>Método Doman</Tab>

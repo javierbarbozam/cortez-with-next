@@ -5,6 +5,8 @@ import { colors } from "./theme/foundations/colors";
 import { fonts } from "./theme/foundations/fonts";
 import { Button } from "./theme/components/Button";
 import { Heading } from "./theme/components/Heading";
+import { tabsVariants } from "./theme/components/Tabs";
+import { linkVariants } from "./theme/components/Link";
 
 const { definePartsStyle } = createMultiStyleConfigHelpers(cardAnatomy.keys);
 
@@ -32,6 +34,8 @@ export const theme = extendTheme({
       },
     },
     Button,
-    Heading
+    Heading,
+    Tabs: tabsVariants,
+    Link: linkVariants
   },
 });
