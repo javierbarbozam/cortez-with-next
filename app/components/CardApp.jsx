@@ -33,7 +33,7 @@ const CardApp = () => {
             <Flex align="center">
               <Image src="/images/apple-logo.svg" alt="" boxSize="30px" ml="-6px" mr="10px" />
               <Box color="#ffffff" textAlign="left">
-                <Text fontSize={{ base: '12px', sm: '12px' }}>Download on the</Text>
+                <Text fontSize={{ base: '12px', sm: '12px' }}>Descargalo en</Text>
                 <Text fontSize={{ base: '20px', sm: '18px' }}>App Store</Text>
               </Box>
             </Flex>
@@ -47,7 +47,7 @@ const CardApp = () => {
             <Flex align="center">
               <Image src="/images/google-play-logo.svg" alt="" boxSize="30px" ml="-6px" mr="16px" />
               <Box color="#ffffff" textAlign="left">
-                <Text fontSize={{ base: '12px', sm: '14px' }}>Get it on</Text>
+                <Text fontSize={{ base: '12px', sm: '14px' }}>Consíguelo en</Text>
                 <Text fontSize={{ base: '15px', sm: '16px' }}>Google Play</Text>
               </Box>
             </Flex>
