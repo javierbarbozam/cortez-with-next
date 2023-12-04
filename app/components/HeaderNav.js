@@ -67,6 +67,7 @@ const MobileNav = () => {
       />
       <Box
         as="nav"
+        bgColor="black"
         display={modalDisplay}
         gap="6"
         alignItems="flexstart"
