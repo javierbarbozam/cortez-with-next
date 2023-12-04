@@ -4,7 +4,7 @@ const GoalsCard = () => {
   return(
     <Card 
     w={{ base: '90%', sm: '800px' }}
-    h="360px"
+    h="100%"
     boxShadow='lg'
     mt={{ base: '50px', sm: '100px' }}
     mb="100px"
@@ -14,7 +14,7 @@ const GoalsCard = () => {
       <CardBody>
         <Heading fontSize={{ base: '22px', sm: '26px' }} mb={{ base: '10px', sm: '15px' }} textAlign="center" mt="10px">Objetivos</Heading>
         <Box display={{ base: 'flow', sm: 'flex' }} alignItems={{ base: 'center', sm: 'center' }} spacing='6px'>
-          <Text fontSize={{ base: '15px', sm: '17px' }} mb="25px" ml="10px" w="100%">
+          <Text fontSize={{ base: '15px', sm: '17px' }} mb="15px" ml="10px" w="100%">
             Buscar constantemente nuevas formas creativas de enseñar a leer, ya 
             sea a través de libros, juegos interactivos, aplicaciones o programas 
             educativos adaptados a las necesidades y preferencias de los niños.

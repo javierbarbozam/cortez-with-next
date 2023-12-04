@@ -21,18 +21,34 @@ const CardApp = () => {
             innovación tecnológica para una experiencia educativa única.
           </Text>
         </CardBody>
-        <CardFooter>
+        <CardFooter display={{ base: 'flow', sm: 'flex' }}>
           <Button
             backgroundColor="#334346"
-            w={{ base: '190px', sm: '210px' }}
+            w={{ base: '160px', sm: '180px' }}
+            h="65px"
+            mb="15px"
+            mr="15px"
+            _hover={{ backgroundColor: '#3B6D71' }}
+          >
+            <Flex align="center">
+              <Image src="/images/apple-logo.svg" alt="" boxSize="30px" ml="-6px" mr="10px" />
+              <Box color="#ffffff" textAlign="left">
+                <Text fontSize={{ base: '12px', sm: '12px' }}>Download on the</Text>
+                <Text fontSize={{ base: '20px', sm: '18px' }}>App Store</Text>
+              </Box>
+            </Flex>
+          </Button>
+          <Button
+            backgroundColor="#334346"
+            w={{ base: '160px', sm: '180px' }}
             h="65px"
             _hover={{ backgroundColor: '#3B6D71' }}
           >
             <Flex align="center">
-              <Image src="/images/apple-logo.svg" alt="" boxSize="40px" mr="7px" />
-              <Box color="#ffffff">
-                <Text fontSize={{ base: '12px', sm: '14px' }}>Download on the</Text>
-                <Text fontSize={{ base: '20px', sm: '25px' }}>App Store</Text>
+              <Image src="/images/google-play-logo.svg" alt="" boxSize="30px" ml="-6px" mr="16px" />
+              <Box color="#ffffff" textAlign="left">
+                <Text fontSize={{ base: '12px', sm: '14px' }}>Get it on</Text>
+                <Text fontSize={{ base: '15px', sm: '16px' }}>Google Play</Text>
               </Box>
             </Flex>
           </Button>
@@ -40,7 +56,7 @@ const CardApp = () => {
       </Box>
       <Image
         p={{ base: '15px', sm: '15px' }}
-        w={{ base: '100%', sm: '370px' }}
+        w={{ base: '100%', sm: '320px' }}
         src='/images/img-método-enseñanza.jpg'
         alt=''
         borderRadius={{ base: '5px', sm: '20px' }}
