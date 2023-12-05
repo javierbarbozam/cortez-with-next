@@ -4,7 +4,7 @@ export const Button = defineStyleConfig({
   baseStyle: {
     fontWeight: 'bold',
     fontFamily: 'kg_blank',
-    borderRadius: 'base',
+    borderRadius: '10px',
     _hover: {
       transform: "scale(1.05, 1.05)"
     },
