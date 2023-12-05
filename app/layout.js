@@ -1,5 +1,7 @@
 import { Providers } from "./providers";
 import { HeaderNav } from "./components/HeaderNav";
+import Script from 'next/script'
+
 
 export const metadata = {
   title: "Cortez Amarillo",
@@ -9,6 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* <Script src="https://sdk.onvopay.com/sdk.js" strategy="beforeInteractive" /> */}
+      <head>
+      <script
+          type="text/javascript"
+          src="https://sdk.onvopay.com/sdk.js"
+        ></script>
+      </head>
       <body>
         <Providers>
           <HeaderNav />
