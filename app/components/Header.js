@@ -7,7 +7,6 @@ import { HeaderNav } from './HeaderNav';
 
 const Header = () => {
   const [display, changeDisplay] = useState('none');
-
   return (
     <Box
       as="header"
@@ -17,24 +16,28 @@ const Header = () => {
       height="100px"
       position="relative"
     >
-      <Flex ml="15px" alignItems="center">
-        <NextLink href="/">
-          <Image
-            src="/footerImg/LogoBlanco.png"
-            alt="logo blanco"
-            width={70}
-            height={50}
-          />
-        </NextLink>
-        <Box
-        ml="50%"
-        >
-        <HeaderNav />
+      <Flex
+        alignItems="center"
+        justifyContent="space-between" 
+      >
+        <Box>
+          <a href="/">
+            <Image
+              src="/footerImg/LogoBlanco.png"
+              alt="logo blanco"
+              width={{base: "60px", sm: "60px", md: "70px"}}
+              height={{base: "60px", sm: "60px", md: "70px"}}
+            />
+          </a>
         </Box>
         
+        <Box>
+          <HeaderNav />
+        </Box>
       </Flex>
     </Box>
   );
 };
+
 
 export default Header;
