@@ -49,7 +49,7 @@ const BookBanner = () => {
             >
               Ordénalo a tan solo: ₡21.000
             </Heading>
-            <Button _hover={{ backgroundColor: '#394d51', color: '#F5c71a' }} fontSize={{ base: '12px', sm: '14px', md: '16px', lg: '18px' }}>
+            <Button variant='yellow'>
               Míralo ahora
             </Button>
           </Box>
