@@ -1,4 +1,5 @@
-import { Box, Button, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Link, Heading, Text, Image } from '@chakra-ui/react';
+import NextLink from "next/link";
 
 const BookBanner = () => {
   return (
@@ -49,9 +50,7 @@ const BookBanner = () => {
             >
               Ordénalo a tan solo: ₡21.000
             </Heading>
-            <Button variant='yellow'>
-              Míralo ahora
-            </Button>
+            <Link as={NextLink} variant='yellowBg' href='/libros/nos-conocemos'>Miralo ahora</Link>
           </Box>
         </Box>
         <Image
