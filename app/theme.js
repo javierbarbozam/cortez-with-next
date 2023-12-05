@@ -20,13 +20,17 @@ export const theme = extendTheme({
         bg: "background",
       },
       header: {
+        height: ['80px', '80px', '120px'],
         bg: 'primary',
-        py: ['4','6','10'],
+        py: '2',
         display: 'flex',
-        aligItems: 'center',
+        alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottom: ['6px solid', '6px solid','8px solid'],
-        borderBottomColor: ['secondary.normal', 'secondary.normal', 'secondary.normal']
+        borderBottom: '6px solid',
+        borderBottomColor: 'secondary.normal'
+      },
+      li: {
+        listStyle: 'none'
       }
     },
   },
