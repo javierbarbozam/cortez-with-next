@@ -18,3 +18,11 @@ export const methodologyTitles = (current) => {
   }
   return data[current]
 };
+
+export const appNavigation = [
+  { href: "/", text: "Inicio" },
+  { href: "/nosotros", text: "Sobre Nosotros" },
+  { href: "/metodologia", text: "Metodología" },
+  { href: "/contacto", text: "Contacto" },
+  { href: "/libros/nos-conocemos", text: "¿Nos Conocemos?" },
+];
