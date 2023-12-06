@@ -1,8 +1,8 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
 import Image from "next/image";
 
 const Footer = () => {
-  const imageStyle = { marginRight: "8px" }; // Establece el margen derecho entre las imágenes
+  const imageStyle = { marginRight: "8px" }; 
 
   return (
     <Box
@@ -13,13 +13,13 @@ const Footer = () => {
       color="white"
       width="100%"
       height="120px"
-      margin="0px" // Establece los márgenes en píxeles
+      margin="0px" 
     >
       <Flex justifyContent="space-around" alignItems="center">
         <Box maxW={{ base: "85px", md: "85px" }} width="100%">
           <Image
             src="/footerImg/app-store.png"
-            alt="App Store"
+            alt="App-Store"
             width={95}
             height={88}
           />
@@ -27,51 +27,52 @@ const Footer = () => {
         <Box maxW={{ base: "85px", md: "85px" }} width="100%">
           <Image
             src="/footerImg/LogoBlue.png"
-            alt="Yellow Logo"
+            alt="YellowLogo"
             width={95}
             height={88}
           />
         </Box>
 
         <Flex>
-        <a href="">
-        <Image
+        <Link href="">
+          <Image
             src="/footerImg/facebook.png"
             alt="facebookFooter"
             width={20}
             height={35}
             style={imageStyle}
           />
-        </a>
+      </Link>
 
-          <a href="https://www.instagram.com/cortezamarillo_cr/">
+      <Link href="https://www.instagram.com/cortezamarillo_cr/">
           <Image
             src="/footerImg/instagram.png"
-            alt="Vector 3"
+            alt="instagramLogo"
             width={20}
             height={35}
             style={imageStyle}
           />
-          </a>
+      </Link>
 
-          <a href="tel:88381532">
+      <Link href="tel:88381532">
           <Image
             src="/footerImg/phone.png"
-            alt="Vector 4"
+            alt="phoneLogo"
             width={20}
             height={35}
             style={imageStyle}
           />
-          </a>
-    <a href="mailto:hola@cortezamarillo-cr.com">
-      <Image
-        src="/footerImg/gmail.png"
-        alt="Vector 4"
-        width={20}
-        height={35}
-        style={imageStyle}
-      />
-    </a>
+      </Link>
+
+      <Link href="mailto:hola@cortezamarillo-cr.com">
+          <Image
+            src="/footerImg/gmail.png"
+            alt="gmail"
+            width={20}
+            height={35}
+            style={imageStyle}
+          />
+      </Link>
         </Flex>
       </Flex>
     </Box>
