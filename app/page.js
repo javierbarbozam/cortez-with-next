@@ -6,6 +6,7 @@ import MissionCard from './components/MissionCard'
 import HomeCard from './components/HomeCard'
 import GoalsCard from './components/GoalsCard'
 import AboutBookCard from './components/AboutBookCard'
+import BookBanner from "./components/BookBanner";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <MissionCard/>
       <GoalsCard/>
       <AboutBookCard/>
+      <BookBanner/>
     </main>
   );
 }

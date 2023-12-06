@@ -24,9 +24,6 @@ export default function Methodology() {
 
   return (
     <main>
-      <Link as={NextLink} href="/">
-        Home
-      </Link>
       <Heading>{methodologyTitles(currentTab)}</Heading>
       <Tabs variant='content' isLazy onChange={() => {titleChange()}}>
         <TabList>
