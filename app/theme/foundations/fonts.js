@@ -8,7 +8,7 @@ const questrial = Questrial({
 });
 
 const kg_blank = localFont({
-  src: '../../assets/local-fonts/KGBlankSpaceSolid.woff2',
+  src: '../../../public/fonts/KGBlankSpaceSolid.woff2',
   display: "swap",
 });
 

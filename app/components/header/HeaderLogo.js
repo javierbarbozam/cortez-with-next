@@ -1,4 +1,4 @@
-import cortezLogo from "../../public/svg/cortez-logo-white.svg";
+import cortezLogo from "../../../public/svg/cortez-logo-white.svg";
 import { Link } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
