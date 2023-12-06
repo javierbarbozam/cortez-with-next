@@ -1,37 +1,44 @@
 "use client";
 
-import { Box, IconButton, Link } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  Link,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { appNavigation } from "../utils/config";
-import { toggleBodyOverflow } from "../utils/toggleBodyOverflow";
+import { appNavigation } from "../../utils/config";
+import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
 
-const NavBar = ({ customEvent }) => {
+const NavBar = ({ displayType, customEvent, spacing = '0' }) => {
   return (
-    <>
+    <UnorderedList display={displayType} gap='4' spacing={spacing}>
       {appNavigation.map((link, index) => (
-        <Link
-          key={index}
-          variant="header"
-          as={NextLink}
-          href={link.href}
-          onClick={() => {
-            toggleBodyOverflow();
-            customEvent();
-          }}
-        >
-          {link.text}
-        </Link>
+        <ListItem key={index}>
+          <Link
+            variant="header"
+            as={NextLink}
+            href={link.href}
+            onClick={() => {
+              toggleBodyOverflow();
+              customEvent();
+            }}
+          >
+            {link.text}
+          </Link>
+        </ListItem>
       ))}
-    </>
+    </UnorderedList>
   );
 };
 
 const DesktopNav = () => {
   return (
-    <Box as='nav' display={["none", "none", "flex"]} gap="4">
-      <NavBar />
+    <Box as="nav" display={["none", "none", "initial"]}>
+      <NavBar displayType='flex'/>
     </Box>
   );
 };
@@ -42,6 +49,7 @@ const MobileNav = () => {
   return (
     <>
       <IconButton
+        color="white"
         display={["block", "block", "none"]}
         onClick={() => {
           toggleBodyOverflow();
@@ -62,7 +70,7 @@ const MobileNav = () => {
         bottom="0"
         right="0"
         bg="black"
-        opacity="0.8"
+        opacity="0.6"
         display={modalDisplay}
       />
       <Box
@@ -72,14 +80,16 @@ const MobileNav = () => {
         alignItems="flexstart"
         flexDirection="column"
         bg="primary"
-        width="40vw"
+        width={["50vw", '40vw']}
         height="100vh"
         position="absolute"
         zIndex="10"
         top="0"
         right="0"
-        px="6"
+        px={['3', '3']}
         pt="6"
+        borderLeft="6px solid"
+        borderLeftColor="secondary.normal"
       >
         <IconButton
           onClick={() => {
@@ -95,7 +105,7 @@ const MobileNav = () => {
           bg="transparent"
           icon={<CloseIcon />}
         ></IconButton>
-        <NavBar customEvent={() => setModalDisplay("none")} />
+        <NavBar displayType='initial' spacing="10" customEvent={() => setModalDisplay("none")} />
       </Box>
     </>
   );

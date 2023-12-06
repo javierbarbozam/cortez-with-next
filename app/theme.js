@@ -19,6 +19,19 @@ export const theme = extendTheme({
         fontFamily: fonts.questrial,
         bg: "background",
       },
+      header: {
+        height: ['80px', '80px', '120px'],
+        bg: 'primary',
+        py: '2',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderBottom: '6px solid',
+        borderBottomColor: 'secondary.normal'
+      },
+      li: {
+        listStyle: 'none'
+      }
     },
   },
   components: {
@@ -31,6 +44,12 @@ export const theme = extendTheme({
               "0px 5px 12px 0px rgba(51, 67, 70, 0.10), 0px 22px 22px 0px rgba(51, 67, 70, 0.09), 0px 49px 29px 0px rgba(51, 67, 70, 0.05), 0px 87px 35px 0px rgba(51, 67, 70, 0.01), 0px 135px 38px 0px rgba(51, 67, 70, 0.00)",
           },
         }),
+      },
+      // 6. We can overwrite defaultProps
+      defaultProps: {
+        size: 'md', // default is md
+        // variant: 'sm', // default is solid
+        // colorScheme: 'green', // default is gray
       },
     },
     Button,
