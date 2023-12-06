@@ -15,12 +15,14 @@ import { useState } from 'react';
 import { sendContactForm } from '@/lib/api';
 
 export default function Form() {
-  const [formData, setFormData] = useState({
+  const initialState = {
     name: '',
     lastName: '',
     email: '',
     message: '',
-  });
+  }
+
+  const [formData, setFormData] = useState(initialState);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -30,11 +32,11 @@ export default function Form() {
     }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     try {
       await sendContactForm(formData);
-      setFormData(formData);
-      console.log(formData)
+      setFormData(initialState);
     } catch (error) {
       console.error('Error al enviar el formulario', error);
     }
@@ -43,7 +45,7 @@ export default function Form() {
     <Card w={{ base: '304px', sm: '570px', md: '834px' }} p={{ base: '24px', sm: '', md: '40px' }}>
       <Box w={{ sm: '400px', md: '570px' }} m='auto'>
         <Heading textAlign='center'>Preguntas, Comentarios, ¡Nos Encantaría Escucharte!</Heading>
-        <FormControl as='form' mt={{ base: '30px', md: '40px' }} isRequired>
+        <FormControl onSubmit={handleSubmit} as='form' mt={{ base: '30px', md: '40px' }} isRequired>
           <Flex flexDirection={{ base: 'column', sm: '', md: 'row' }} gap={{ sm: '0', md: '32px' }}>
             <Box w={{ sm: '', md: '50%' }} mb={{ base: '16px', sm: '24px' }}>
               <FormLabel htmlFor='nombre'>Nombre</FormLabel>
@@ -59,7 +61,7 @@ export default function Form() {
           <FormLabel htmlFor='message'>Mensaje</FormLabel>
           <Textarea id='message' bgColor='#E1ECEC' name='message' value={formData.message} onChange={handleInputChange} ></Textarea>
           <Flex justifyContent='center'>
-            <Button type='submit' mt='16px' onClick={handleSubmit}>Enviar mensaje</Button>
+            <Button type='submit' mt='16px'>Enviar mensaje</Button>
           </Flex>
         </FormControl>
       </Box>

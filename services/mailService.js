@@ -12,16 +12,7 @@ const transporter = nodemailer.createTransport({
 
 export async function sendEmail({ name, lastName, email, message }) {
   const emailContent = `
-    <div style="
-      border-radius: 8px; 
-      box-shadow: 10px 11px 31px -3px rgba(0,0,0,0.66); 
-      background-color: #f5f3f4; 
-      padding: 20px; 
-      margin: 20px auto; 
-      max-width: 300px; 
-      display:flex; 
-      justify-content:center;
-      flex-direction: column;">
+    <div>
       <div>
         <strong>Nombre y Apellido:</strong> ${name} ${lastName}
       </div>
