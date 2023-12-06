@@ -45,12 +45,6 @@ export const theme = extendTheme({
           },
         }),
       },
-      // 6. We can overwrite defaultProps
-      defaultProps: {
-        size: 'md', // default is md
-        // variant: 'sm', // default is solid
-        // colorScheme: 'green', // default is gray
-      },
     },
     Button,
     Heading,
