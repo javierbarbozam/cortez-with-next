@@ -1,12 +1,10 @@
-"use client";
-
-import { Box, IconButton, Link } from "@chakra-ui/react";
-import {extendTheme} from "../theme"
+import { Box, IconButton, Link, useTheme } from "@chakra-ui/react";
 import { useState } from "react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import { appNavigation } from "../utils/config";
 import { toggleBodyOverflow } from "../utils/toggleBodyOverflow";
+import { extendTheme  } from "../theme";
 
 const NavBar = ({ customEvent }) => {
   return (
@@ -39,6 +37,7 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
   const [modalDisplay, setModalDisplay] = useState("none");
+  const theme = useTheme(); // Obtener el tema actual
 
   return (
     <>
@@ -53,7 +52,7 @@ const MobileNav = () => {
         size="lg"
         bg="transparent"
         icon={<HamburgerIcon />}
-      ></IconButton>
+      />
       <Box
         onClick={() => setModalDisplay("none")}
         position="absolute"
@@ -68,12 +67,11 @@ const MobileNav = () => {
       />
       <Box
         as="nav"
-        bgColor="#2F5356"
+        bg={theme.colors.primary[500]}
         display={modalDisplay}
         gap="6"
-        alignItems="flexstart"
+        alignItems="flex-start"
         flexDirection="column"
-        bg="primary"
         width="40vw"
         height="100vh"
         position="absolute"
@@ -96,7 +94,7 @@ const MobileNav = () => {
           size="md"
           bg="transparent"
           icon={<CloseIcon />}
-        ></IconButton>
+        />
         <NavBar customEvent={() => setModalDisplay("none")} />
       </Box>
     </>

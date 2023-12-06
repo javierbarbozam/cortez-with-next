@@ -27,7 +27,7 @@ const Footer = () => {
         <Box maxW={{ base: "85px", md: "85px" }} width="100%">
           <Image
             src="/footerImg/LogoBlue.png"
-            alt="YellowLogo"
+            alt="blueLogo-footer"
             width={95}
             height={88}
           />
@@ -37,7 +37,7 @@ const Footer = () => {
         <Link href="">
           <Image
             src="/footerImg/facebook.png"
-            alt="facebookFooter"
+            alt="facebookLogo-Footer"
             width={20}
             height={35}
             style={imageStyle}
@@ -47,7 +47,7 @@ const Footer = () => {
       <Link href="https://www.instagram.com/cortezamarillo_cr/">
           <Image
             src="/footerImg/instagram.png"
-            alt="instagramLogo"
+            alt="instagramLogo-footer"
             width={20}
             height={35}
             style={imageStyle}
@@ -57,7 +57,7 @@ const Footer = () => {
       <Link href="tel:88381532">
           <Image
             src="/footerImg/phone.png"
-            alt="phoneLogo"
+            alt="phoneLogo-footer"
             width={20}
             height={35}
             style={imageStyle}
@@ -67,7 +67,7 @@ const Footer = () => {
       <Link href="mailto:hola@cortezamarillo-cr.com">
           <Image
             src="/footerImg/gmail.png"
-            alt="gmail"
+            alt="gmail-footer"
             width={20}
             height={35}
             style={imageStyle}
