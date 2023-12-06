@@ -34,6 +34,17 @@ export const theme = extendTheme({
       }
     },
   },
+  layerStyles: {
+    base: {
+      maxW: '1200px',
+      m: {
+        base: "0 35px",
+        sm: "0 70px",
+        md: "0 140px",
+        lg: "0 auto"
+      },
+    },
+  },
   components: {
     Card: {
       baseStyle: {},
