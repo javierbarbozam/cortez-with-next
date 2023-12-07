@@ -25,7 +25,7 @@ const baseStyle = definePartsStyle({
   },
   header: {
     p: "0",
-    paddingBottom: ["5px", "15px"],
+    paddingBottom: ["10px", "15px"],
   },
   body: {
     p: ["20px", "30px", "40px"],
