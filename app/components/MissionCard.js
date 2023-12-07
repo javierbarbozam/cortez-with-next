@@ -7,7 +7,7 @@ const MissionCard = () => {
       boxShadow='lg'
       mt={{ base: '50px', sm: '100px' }}
       mb="100px"
-      mx="auto"
+      mx={{ base: 'auto', sm: '20px', md:'auto', lg:'auto' }}
     >
       <CardBody>
       <Image

@@ -5,9 +5,9 @@ const HomeCard = () => {
     <Card
       maxW={{ base: '90%', sm: '750px' }}
       boxShadow='lg'
-      mt={{ base: '50px', sm: '100px' }}
+      mt={{ base: '400px', sm: '100px' }}
       mb="100px"
-      mx="auto"
+      mx={{ base: 'auto', sm: '20px', md:'auto', lg:'auto' }}
     >
       <CardBody mx="auto">
         <Heading fontSize={{ base: '22px', sm: '26px' }} mb={{ base: '10px', sm: '15px' }} textAlign={{ base: 'left', sm: 'center' }}>¿Quiénes somos?</Heading>

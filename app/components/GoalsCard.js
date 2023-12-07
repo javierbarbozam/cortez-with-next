@@ -3,12 +3,12 @@ import { Card, Text, Heading, Image, Box, CardBody} from '@chakra-ui/react';
 const GoalsCard = () => {
   return(
     <Card 
-    w={{ base: '90%', sm: '800px' }}
+    maxW={{ base: '90%', sm: '750px' }}
     h="100%"
     boxShadow='lg'
     mt={{ base: '50px', sm: '100px' }}
     mb="100px"
-    mx="auto"
+    mx={{ base: 'auto', sm: '20px', md:'auto', lg:'auto' }}
     alignItems="center"
     >
       <CardBody>
