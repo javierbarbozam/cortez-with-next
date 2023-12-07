@@ -61,7 +61,7 @@ const CardApp = () => {
       <Image
           p={{ base: '15px', sm: '15px' }}
           w={{ base: '100%', sm: '380px' }}
-          src='/images/img-método-enseñanza.jpg'
+          src='/images/img-metodo-enseñanza.jpg'
           alt=''
           borderRadius={{ base: '5px', sm: '20px' }}
           opacity={0.7}

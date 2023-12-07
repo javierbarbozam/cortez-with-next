@@ -13,7 +13,7 @@ const MissionCard = () => {
       <Image
         p={{ base: '5px', sm: '5px' }}
         w={{ base: '100%', sm: '370px' }}
-        src='/images/img-método-enseñanza.jpg'
+        src='/images/img-metodo-enseñanza.jpg'
         alt=''
         borderRadius={{ base: '5px', sm: '15px' }}
         opacity={0.7}

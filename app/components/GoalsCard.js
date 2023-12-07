@@ -20,7 +20,7 @@ const GoalsCard = () => {
             educativos adaptados a las necesidades y preferencias de los niños.
           </Text>
           <Image
-            src='/images/img-método-enseñanza.jpg'
+            src='/images/img-metodo-enseñanza.jpg'
             alt=''
             p={{ base: '15px', sm: '15px' }}
             w={{ base: '100%', sm: '370px' }}
