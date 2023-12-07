@@ -20,18 +20,24 @@ export const theme = extendTheme({
         bg: "background",
       },
       header: {
-        height: ['80px', '80px', '120px'],
-        bg: 'primary',
-        py: '2',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        borderBottom: '6px solid',
-        borderBottomColor: 'secondary.normal'
+        height: ["80px", "80px", "120px"],
+        bg: "primary",
+        py: "2",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        borderBottom: "6px solid",
+        borderBottomColor: "secondary.normal",
+      },
+      footer: {
+        width: "100%",
+        py: "4",
+        bg: "url(/images/leaves-bg.png) center/contain",
+        backgroundColor: "secondary.light",
       },
       li: {
-        listStyle: 'none'
-      }
+        listStyle: "none",
+      },
     },
   },
   components: {
@@ -49,6 +55,6 @@ export const theme = extendTheme({
     Button,
     Heading,
     Tabs: tabsVariants,
-    Link: linkVariants
+    Link: linkVariants,
   },
 });
