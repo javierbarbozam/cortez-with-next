@@ -26,3 +26,9 @@ export const appNavigation = [
   { href: "/contacto", text: "Contacto" },
   { href: "/libros/nos-conocemos", text: "¿Nos Conocemos?" },
 ];
+
+export const contactData = [
+  { title: 'instagram', link: 'https://www.instagram.com/cortezamarillo_cr/' },
+  { title: 'phone', link: 'tel:88381532' },
+  { title: 'email', link: 'mailto:hola@cortezamarillo-cr.com' }
+];

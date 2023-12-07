@@ -2,7 +2,7 @@ import { defineStyleConfig } from '@chakra-ui/react'
 
 export const Button = defineStyleConfig({
   baseStyle: {
-    fontWeight: '500',
+    fontWeight: 'bold',
     fontFamily: 'kg_blank',
     borderRadius: '10px',
     _hover: {
