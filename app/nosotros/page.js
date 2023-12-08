@@ -12,6 +12,7 @@ export default function AboutUs() {
         description={history.description}
       />
       <MediaCard
+        direction="row-reverse"
         media={goals.media}
         title={goals.title}
         info={goals.description}
