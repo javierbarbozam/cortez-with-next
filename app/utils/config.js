@@ -5,19 +5,17 @@ import methodImg from "../../public/images/kid-and-woman.png";
 import goalsImg from "../../public/images/kids-studying.png";
 import appImg from "../../public/images/video-preview.png";
 
-const MethodImage = () => (
+const ImageComponent = ({ source }) => (
   <Image
-    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
+    style={{
+      borderRadius: "10px",
+      height: "100%",
+      width: "100%",
+      objectFit: "cover",
+      objectPosition: "center",
+    }}
     alt=""
-    src={methodImg}
-  ></Image>
-);
-
-const GoalsImage = () => (
-  <Image
-    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
-    alt=""
-    src={goalsImg}
+    src={source}
   ></Image>
 );
 
@@ -25,14 +23,6 @@ const MethodCta = () => (
   <Link variant="yellowBg" as={NextLink} href="/metodologia">
     Descubre más
   </Link>
-);
-
-const AppPreview = () => (
-  <Image
-    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
-    alt=""
-    src={appImg}
-  ></Image>
 );
 
 export const books = [
@@ -81,7 +71,7 @@ export const pagesData = {
       title: "Explora nuestro método de enseñanza",
       description:
         "La Etapa 4 del Método Doman se enfoca en enseñar la lectura a través de tarjetas de palabras, ayudando a reconocer y leer palabras y frases temprano en el desarrollo.",
-      media: <MethodImage />,
+      media: <ImageComponent source={methodImg} />,
       cta: [<MethodCta key={1} />],
     },
   },
@@ -95,12 +85,23 @@ export const pagesData = {
       title: "Objetivos",
       description:
         "Buscar constantemente nuevas formas creativas de enseñar a leer, ya sea a través de libros, juegos interactivos, aplicaciones o programas educativos adaptados a las necesidades y preferencias de los niños.",
-      media: <GoalsImage />,
+      media: <ImageComponent source={goalsImg} />,
+    },
+    mission: {
+      title: "Misión",
+      description:
+        "En Cortez Amarillo, inspiramos a los niños a través de recursos educativos innovadores, fomentando la pasión por la lectura y la alfabetización en todos los rincones.",
+      media: <ImageComponent source={goalsImg} />,
+    },
+    vision: {
+      title: "Visión",
+      description:
+        "Visualizamos un mundo donde cada niño, sin importar su origen, descubra la riqueza de las palabras, desarrollando una pasión duradera por la lectura, y buscamos expandir nuestro impacto educativo hacia nuevas audiencias",
     },
   },
   app: {
     title: "Descarga nuestra app",
-    media: <AppPreview />,
+    media: <ImageComponent source={appImg} />,
     description:
       "Sumérgete en el mundo colorido de los animales costarricenses con nuestra aplicación, la cual fusiona la lectura con innovación tecnológica para una experiencia educativa única.",
   },
