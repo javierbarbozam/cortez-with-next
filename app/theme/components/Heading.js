@@ -9,6 +9,9 @@ export const Heading = defineStyleConfig({
   variants: {
     descriptionCard: {
       textAlign: { base: "left", sm: "center" }
-    }
+    },
+    mediaCard: {
+      textAlign: 'left'
+    },
   }
 })
