@@ -5,5 +5,13 @@ export const Heading = defineStyleConfig({
     fontFamily: "kg_blank",
     textAlign: 'center',
     color: "text",
+  },
+  variants: {
+    descriptionCard: {
+      textAlign: { base: "left", sm: "center" }
+    },
+    mediaCard: {
+      textAlign: 'left'
+    },
   }
 })
