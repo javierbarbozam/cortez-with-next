@@ -1,10 +1,21 @@
-import { Heading, Link } from "@chakra-ui/react";
-import NextLink from 'next/link'
+import { MediaCard } from "../components/Card/MediaCard";
+import { DescriptionCard } from "../components/Card/DescriptionCard";
+import { pagesData } from "../utils/config";
+
+const { history, goals } = pagesData.about;
 
 export default function AboutUs() {
   return (
     <main>
-      <Heading>Im About Us</Heading>
+      <DescriptionCard
+        title={history.title}
+        description={history.description}
+      />
+      <MediaCard
+        media={goals.media}
+        title={goals.title}
+        info={goals.description}
+      />
     </main>
   );
 }
