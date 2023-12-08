@@ -1,4 +1,5 @@
 import BookBanner from "./components/BookBanner";
+import { AppCard } from "./components/Card/AppCard";
 import { DescriptionCard } from "./components/Card/DescriptionCard";
 import { MediaCard } from "./components/Card/MediaCard";
 import { pagesData } from "./utils/config";
@@ -16,6 +17,7 @@ export default function Home() {
         info={learningMethod.description}
         cta={learningMethod.cta}
       />
+      <AppCard />
     </main>
   );
 }

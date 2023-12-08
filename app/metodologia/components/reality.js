@@ -1,3 +1,4 @@
+import { AppCard } from "@/app/components/Card/AppCard";
 import { AspectRatio, Text } from "@chakra-ui/react";
 
 export const Reality = () => {
@@ -20,6 +21,7 @@ export const Reality = () => {
           allowFullScreen
         />
       </AspectRatio>
+      <AppCard />
     </>
   );
 };
