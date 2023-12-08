@@ -30,12 +30,27 @@ const baseStyle = definePartsStyle({
   body: {
     p: ["20px", "30px", "40px"],
   },
-  footer: {
-    paddingTop: "4px",
-  },
 });
+
+const variants = {
+  mediaCard: definePartsStyle({
+    container: {
+      p: ["20px", "30px", "40px"],
+      justifyContent: [null, "space-between"],
+    },
+    body: {
+      p: "0",
+    },
+    footer: {
+      p: "0",
+      gap: "4",
+      flexWrap: [null, 'wrap']
+    },
+  }),
+};
 
 // export the component
 export const card = defineMultiStyleConfig({
   baseStyle,
+  variants,
 });
