@@ -1,3 +1,20 @@
+import Image from "next/image";
+import methodImg from "../../public/images/kid-and-woman.png";
+import { Link } from "@chakra-ui/react";
+import NextLink from "next/link"
+
+const methodImage = () => (
+  <Image
+    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
+    alt=""
+    src={methodImg}
+  ></Image>
+);
+
+const MethodCta = () => {
+  return (<Link variant='yellowBg' as={NextLink} href="/metodologia">Descubre más</Link>)
+}
+
 export const books = [
   {
     id: "nos-conocemos",
@@ -39,6 +56,13 @@ export const pagesData = {
       title: "¿Quiénes somos?",
       description:
         "CortezAmarillo es una empresa costarricense de innovación en el ámbito de la educación, específicamente para brindar alternativas de lectura en etapas tempranas de aprendizaje, que combine lectura tradicional con herramientas tecnológicas para lograr un vínculo emocional y una experiencia más placentera.",
+    },
+    learningMethod: {
+      title: "Explora nuestro método de enseñanza",
+      description:
+        "La Etapa 4 del Método Doman se enfoca en enseñar la lectura a través de tarjetas de palabras, ayudando a reconocer y leer palabras y frases temprano en el desarrollo.",
+      media: methodImage(),
+      cta: [<MethodCta key={1}/>]
     },
   },
 };
