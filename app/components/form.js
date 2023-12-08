@@ -14,6 +14,13 @@ import {
 import { useState } from 'react';
 import { sendContactForm } from '@/lib/api';
 
+const margin = {
+  mb: {
+    base:'16px', 
+    sm: '24px' 
+  }
+}
+
 export default function Form() {
   const initialState = {
     name: '',
@@ -42,24 +49,51 @@ export default function Form() {
     }
   };
   return (
-    <Card w={{ base: '304px', sm: '570px', md: '834px' }} p={{ base: '24px', sm: '', md: '40px' }}>
+    <Card w='95%' p={{ base: '24px', md: '40px' }} m='70px auto'>
       <Box w={{ sm: '400px', md: '570px' }} m='auto'>
-        <Heading textAlign='center'>Preguntas, Comentarios, ¡Nos Encantaría Escucharte!</Heading>
+        <Heading align='center'>Preguntas, Comentarios, ¡Nos Encantaría Escucharte!</Heading>
         <FormControl onSubmit={handleSubmit} as='form' mt={{ base: '30px', md: '40px' }} isRequired>
-          <Flex flexDirection={{ base: 'column', sm: '', md: 'row' }} gap={{ sm: '0', md: '32px' }}>
-            <Box w={{ sm: '', md: '50%' }} mb={{ base: '16px', sm: '24px' }}>
+          <Flex flexDirection={{ base: 'column', md: 'row' }} gap={{md: '32px' }}>
+            <Box w={{ md: '50%' }} {...margin}>
               <FormLabel htmlFor='nombre'>Nombre</FormLabel>
-              <Input id='nombre' type='text' bgColor='#E1ECEC' name='name' value={formData.name} onChange={handleInputChange} />
+              <Input 
+                id='nombre' 
+                type='text' 
+                bgColor='#E1ECEC' 
+                name='name' 
+                value={formData.name} 
+                onChange={handleInputChange} 
+              />
             </Box>
-            <Box w={{ sm: '', md: '50%' }} mb={{ base: '16px', sm: '24px' }}>
+            <Box w={{ md: '50%' }} {...margin}>
               <FormLabel htmlFor='lastname'>Apellidos</FormLabel>
-              <Input id='lastname' type='text' bgColor='#E1ECEC' name='lastName' value={formData.lastName} onChange={handleInputChange} />
+              <Input 
+                id='lastname' 
+                type='text' 
+                bgColor='#E1ECEC' 
+                name='lastName' 
+                value={formData.lastName} 
+                onChange={handleInputChange} 
+              />
             </Box>
           </Flex>
           <FormLabel htmlFor='correo'>Email</FormLabel>
-          <Input id='correo' type='email' bgColor='#E1ECEC' mb={{ base: '16px', sm: '24px' }} name='email' value={formData.email} onChange={handleInputChange}/>
+          <Input 
+            id='correo' 
+            type='email' 
+            bgColor='#E1ECEC' 
+            {...margin}
+            name='email' value={formData.email} 
+            onChange={handleInputChange}
+          />
           <FormLabel htmlFor='message'>Mensaje</FormLabel>
-          <Textarea id='message' bgColor='#E1ECEC' name='message' value={formData.message} onChange={handleInputChange} ></Textarea>
+          <Textarea 
+            id='message' 
+            bgColor='#E1ECEC' 
+            name='message' 
+            value={formData.message} 
+            onChange={handleInputChange} 
+          ></Textarea>
           <Flex justifyContent='center'>
             <Button type='submit' mt='16px'>Enviar mensaje</Button>
           </Flex>
