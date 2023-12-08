@@ -1,9 +1,10 @@
 import Image from "next/image";
-import methodImg from "../../public/images/kid-and-woman.png";
 import { Link } from "@chakra-ui/react";
-import NextLink from "next/link"
+import NextLink from "next/link";
+import methodImg from "../../public/images/kid-and-woman.png";
+import goalsImg from "../../public/images/kids-studying.png";
 
-const methodImage = () => (
+const MethodImage = () => (
   <Image
     style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
     alt=""
@@ -11,9 +12,21 @@ const methodImage = () => (
   ></Image>
 );
 
+const GoalsImage = () => (
+  <Image
+    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
+    alt=""
+    src={goalsImg}
+  ></Image>
+);
+
 const MethodCta = () => {
-  return (<Link variant='yellowBg' as={NextLink} href="/metodologia">Descubre más</Link>)
-}
+  return (
+    <Link variant="yellowBg" as={NextLink} href="/metodologia">
+      Descubre más
+    </Link>
+  );
+};
 
 export const books = [
   {
@@ -61,8 +74,21 @@ export const pagesData = {
       title: "Explora nuestro método de enseñanza",
       description:
         "La Etapa 4 del Método Doman se enfoca en enseñar la lectura a través de tarjetas de palabras, ayudando a reconocer y leer palabras y frases temprano en el desarrollo.",
-      media: methodImage(),
-      cta: [<MethodCta key={1}/>]
+      media: <MethodImage />,
+      cta: [<MethodCta key={1} />],
+    },
+  },
+  about: {
+    history: {
+      title: "Nuestra historia",
+      description:
+        "Una editorial encantada. Un equipo creativo, historias y recursos educativos. Acceso universal, imaginación sin fronteras. Compromiso, sonrisas, aprendizaje. Cada página, mundo de posibilidades. Niños, lectura, grandeza.",
+    },
+    goals: {
+      title: "Objetivos",
+      description:
+        "Buscar constantemente nuevas formas creativas de enseñar a leer, ya sea a través de libros, juegos interactivos, aplicaciones o programas educativos adaptados a las necesidades y preferencias de los niños.",
+        media: <GoalsImage />
     },
   },
 };
