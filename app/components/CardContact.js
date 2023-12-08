@@ -25,7 +25,7 @@ const socialMedia = [
 
 export default function Contact() {
   return (
-    <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap='20px' m='50px 20px'>
+    <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap='20px'>
       {socialMedia.map((network, index) => (
         <GridItem key={index}>
           <Link href={network.link}>
