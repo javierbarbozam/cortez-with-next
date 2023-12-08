@@ -8,8 +8,7 @@ const { history, goals, mission, vision } = pagesData.about;
 export default function AboutUs() {
   return (
     <main>
-      <Container maxW={{md:'1000px'}} display='grid' gap='60px' m='60px auto'>
-        <DescriptionCard
+      <DescriptionCard
           title={history.title}
           description={history.description}
         />
@@ -33,7 +32,6 @@ export default function AboutUs() {
             info={vision.description}
           />
         </Flex>
-      </Container>
     </main>
   );
 }
