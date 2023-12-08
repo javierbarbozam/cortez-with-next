@@ -47,6 +47,17 @@ const variants = {
       flexWrap: [null, 'wrap']
     },
   }),
+  columnCard: definePartsStyle({
+    container: {
+      width: '100%',
+      p: ["20px", "30px", "40px"],
+      flexDirection: 'column',
+      gap: {base: '4', md: '8'}
+    },
+    body: {
+      p: "0",
+    },
+  }),
 };
 
 // export the component
