@@ -3,6 +3,7 @@ import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import methodImg from "../../public/images/kid-and-woman.png";
 import goalsImg from "../../public/images/kids-studying.png";
+import appImg from "../../public/images/video-preview.png";
 
 const MethodImage = () => (
   <Image
@@ -20,13 +21,19 @@ const GoalsImage = () => (
   ></Image>
 );
 
-const MethodCta = () => {
-  return (
-    <Link variant="yellowBg" as={NextLink} href="/metodologia">
-      Descubre más
-    </Link>
-  );
-};
+const MethodCta = () => (
+  <Link variant="yellowBg" as={NextLink} href="/metodologia">
+    Descubre más
+  </Link>
+);
+
+const AppPreview = () => (
+  <Image
+    style={{ height: "100%", objectFit: "contain", objectPosition: "center" }}
+    alt=""
+    src={appImg}
+  ></Image>
+);
 
 export const books = [
   {
@@ -88,7 +95,13 @@ export const pagesData = {
       title: "Objetivos",
       description:
         "Buscar constantemente nuevas formas creativas de enseñar a leer, ya sea a través de libros, juegos interactivos, aplicaciones o programas educativos adaptados a las necesidades y preferencias de los niños.",
-        media: <GoalsImage />
+      media: <GoalsImage />,
     },
+  },
+  app: {
+    title: "Descarga nuestra app",
+    media: <AppPreview />,
+    description:
+      "Sumérgete en el mundo colorido de los animales costarricenses con nuestra aplicación, la cual fusiona la lectura con innovación tecnológica para una experiencia educativa única.",
   },
 };
