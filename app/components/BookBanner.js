@@ -54,7 +54,7 @@ const BookBanner = () => {
           </Box>
         </Box>
         <Image
-          src="/images/libro-animalescr.png"
+          src="/images/book-crAnimals.png"
           alt=""
           w={{ base: '100%', sm: '275px', md: '382px', lg: '430px' }}
           position={{ base: 'relative', sm: 'absolute' }}
