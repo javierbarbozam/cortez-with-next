@@ -10,21 +10,16 @@ import {
 } from "@chakra-ui/react";
 
 const RowCard = ({ direction, media, title, info, cta }) => (
-  <Card
-    variant="mediaCard"
-    direction={{ base: "column", sm: direction }}
-    h={{ sm: "300px", md: "350px" }}
-  >
-    <Box height={["50%", "100%"]} width={["100%", "50%"]}>
+  <Card variant="mediaCard" direction={{ base: "column", sm: direction }}>
+    <Box width={{ base: "100%", md: "50%" }} height="100%">
       {media}
     </Box>
     <Box
-      mt={{ base: "15px", sm: "0" }}
-      width={["100%", "50%"]}
       display="flex"
       gap="4"
       flexDir="column"
       alignItems="space-between"
+      width={{ base: "100%", md: "50%" }}
     >
       <CardBody>
         <CardHeader>
@@ -34,18 +29,20 @@ const RowCard = ({ direction, media, title, info, cta }) => (
         </CardHeader>
         <Text fontSize={["md", "md", "xl"]}>{info}</Text>
       </CardBody>
-      <CardFooter>
-        {cta
-          ? cta.map((element, index) => <Flex key={index}>{element}</Flex>)
-          : null}
-      </CardFooter>
+      {cta ? (
+        <CardFooter>
+          {cta.map((index, element) => (
+            <Flex key={index}>{element}</Flex>
+          ))}
+        </CardFooter>
+      ) : null}
     </Box>
   </Card>
 );
 
 const ColumnCard = ({ media, title, info, cta }) => (
   <Card variant="columnCard">
-    <Box width="100%" height={{base: '150px', md: '250px'}}>
+    <Box width="100%" height={{ base: "150px", md: "250px" }}>
       {media}
     </Box>
     <Box display="flex" gap="4" flexDir="column" alignItems="space-between">
