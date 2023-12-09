@@ -49,7 +49,7 @@ export default function Form() {
     }
   };
   return (
-    <Card p={{ base: '24px', md: '40px' }}>
+    <Card w='100%' p={{ base: '24px', md: '40px' }}>
       <Box w={{ sm: '400px', md: '570px' }} m='auto'>
         <Heading align='center'>Preguntas, Comentarios, ¡Nos Encantaría Escucharte!</Heading>
         <FormControl onSubmit={handleSubmit} as='form' mt={{ base: '30px', md: '40px' }} isRequired>
