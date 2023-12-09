@@ -6,8 +6,8 @@ import Form from '../components/form';
 export default function AboutUs() {
   return (
     <main>
-      <Heading>Contacto</Heading>
       <Container centerContent>
+        <Heading>Contacto</Heading>
         <Contact />
         <Form />
       </Container>

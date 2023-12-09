@@ -9,6 +9,7 @@ import {
   Tab,
   TabPanels,
   TabPanel,
+  Container,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { Doman } from "./components/doman";
@@ -24,17 +25,19 @@ export default function Methodology() {
 
   return (
     <main>
-      <Heading>{methodologyTitles(currentTab)}</Heading>
-      <Tabs variant='content' isLazy onChange={() => {titleChange()}}>
-        <TabList>
-          <Tab>Realidad Aumentada</Tab>
-          <Tab>Método Doman</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>{Reality()}</TabPanel>
-          <TabPanel>{Doman()}</TabPanel>
-        </TabPanels>
-      </Tabs>
+      <Container centerContent>
+        <Heading>{methodologyTitles(currentTab)}</Heading>
+        <Tabs variant='content' isLazy onChange={() => {titleChange()}}>
+          <TabList>
+            <Tab>Realidad Aumentada</Tab>
+            <Tab>Método Doman</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>{Reality()}</TabPanel>
+            <TabPanel>{Doman()}</TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Container>
     </main>
   );
 }

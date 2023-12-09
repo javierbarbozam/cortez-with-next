@@ -4,6 +4,7 @@ import {
   UnorderedList,
   Link,
   VisuallyHidden,
+  Container,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import cortezLogo from "../../public/svg/cortez-logo-green.svg";
@@ -51,18 +52,20 @@ const ContactList = () => {
 export const Footer = () => {
   return (
     <Box as="footer">
-      <Box display="flex" alignItems="center" justifyContent="space-between" height={["60px", "80px", "120px"]}>
-        <AppStore />
-        <Image
-          priority={true}
-          alt=""
-          src={cortezLogo}
-          width={0}
-          height={0}
-          style={{ width: "auto", height: "100%" }}
-        ></Image>
-        <ContactList />
-      </Box>
+      <Container variant='layoutVariant'>
+        <Box display="flex" alignItems="center" justifyContent="space-between" height={["60px", "80px", "120px"]}>
+          <AppStore />
+          <Image
+            priority={true}
+            alt=""
+            src={cortezLogo}
+            width={0}
+            height={0}
+            style={{ width: "auto", height: "100%" }}
+          ></Image>
+          <ContactList />
+        </Box>
+      </Container>
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { defineStyleConfig } from '@chakra-ui/react'
+import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 const baseStyle = {
   maxW:{
@@ -15,4 +15,16 @@ const baseStyle = {
   gap: '30px',
 }
 
-export const containerTheme = defineStyleConfig({ baseStyle })
+const layoutVariant = defineStyle(() => {
+  return {
+    p: '0 30px',
+    h:'100%'
+  }
+})
+
+// define custom variants
+const variants = {
+  layoutVariant: layoutVariant,
+}
+
+export const containerTheme = defineStyleConfig({ baseStyle, variants })
