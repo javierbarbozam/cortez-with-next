@@ -4,7 +4,6 @@ import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(cardAnatomy.keys);
 
-// base component styles
 const baseStyle = definePartsStyle({
   container: {
     boxShadow: "lg",
@@ -37,6 +36,7 @@ const variants = {
     container: {
       p: ["20px", "30px", "40px"],
       justifyContent: [null, "space-between"],
+      gap: {base: '4', md: '8'},
     },
     body: {
       p: "0",
@@ -47,9 +47,19 @@ const variants = {
       flexWrap: [null, 'wrap']
     },
   }),
+  columnCard: definePartsStyle({
+    container: {
+      width: '100%',
+      p: ["20px", "30px", "40px"],
+      flexDirection: 'column',
+      gap: {base: '4', md: '8'}
+    },
+    body: {
+      p: "0",
+    },
+  }),
 };
 
-// export the component
 export const card = defineMultiStyleConfig({
   baseStyle,
   variants,
