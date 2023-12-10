@@ -1,6 +1,7 @@
 import { AppCard } from '@/app/components/Card/AppCard'
 import {books} from '../../utils/config'
-import { Container } from '@chakra-ui/react'
+import { Container, Heading } from '@chakra-ui/react'
+import { MediaCard } from '@/app/components/Card/MediaCard'
 
 export async function generateStaticParams() {
   const paths = books.map((item) => item.id)
@@ -16,8 +17,13 @@ export default function Page({ params }) {
   return (
     <main>
       <Container centerContent>
-        <h1>{data.title}</h1>
-        <p>{data.description}</p>
+        <Heading>{data.title}</Heading>
+        <MediaCard 
+          media={data.media}
+          title={data.subtitle}
+          info={data.description}
+          price={data.price}
+        />
         <AppCard />
       </Container>
     </main>
