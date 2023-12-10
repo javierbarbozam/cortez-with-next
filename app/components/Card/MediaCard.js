@@ -11,7 +11,7 @@ import {
 
 const RowCard = ({ direction, media, title, info, cta }) => (
   <Card variant="mediaCard" direction={{ base: "column", sm: direction }}>
-    <Box width={{ base: "100%", md: "50%" }} height="100%">
+    <Box width={{ base: "100%", md: "50%" }} height="auto">
       {media}
     </Box>
     <Box
@@ -29,13 +29,7 @@ const RowCard = ({ direction, media, title, info, cta }) => (
         </CardHeader>
         <Text fontSize={["md", "md", "xl"]}>{info}</Text>
       </CardBody>
-      {cta ? (
-        <CardFooter>
-          {cta.map((index, element) => (
-            <Flex key={index}>{element}</Flex>
-          ))}
-        </CardFooter>
-      ) : null}
+      {cta ? <CardFooter>{cta.map((element) => element)}</CardFooter> : null}
     </Box>
   </Card>
 );
