@@ -9,6 +9,7 @@ const BookBanner = () => {
       w="100%"
       h={{ base: '340px', sm: '320px', md: '400px', lg: '430px' }}
       color="#394d51"
+      mb={{ base: '80%', sm:'0'}}
     >
       <Box 
         mx="auto"
@@ -20,7 +21,7 @@ const BookBanner = () => {
         bg="rgba(255, 255, 255, 0.8)"
       >
         <Box
-          ml={{ base: '32px', sm: '-230px', md: '-260px', lg: '-400px' }}
+          ml={{ base: '34px', sm: '-175px', md: '-260px', lg: '-400px' }}
         >
           <Heading
             fontSize={{ base: '18px', sm: '16px', md: '22px', lg: '30px' }}
@@ -28,13 +29,13 @@ const BookBanner = () => {
             pt={{ base: '30px', sm: '30px', md: '50px', lg: '50px' }}
             mt={{ base: '0', sm: '15px', md: '50px', lg: '50px' }}
             textAlign={{ base: 'left', sm: 'left' }}
-            w={{ base: '220px', sm: '260px', md: '370px', lg: '500px' }}
+            w={{ base: '220px', sm: '230px', md: '370px', lg: '500px' }}
           >
             ¡Abre las páginas y descubre la magia de Costa Rica!
           </Heading>
           <Text
             fontSize={{ base: '14px', sm: '14px', md: '18px', lg: '20px' }}
-            w={{ base: '230px', sm: '240px', md: '350px', lg: '500px' }}
+            w={{ base: '230px', sm: '230px', md: '350px', lg: '500px' }}
             textAlign={{ base: 'left', sm: 'left' }}
           >
             Cada animal tiene una historia. Leerla y verla cobrar vida nunca había sido tan fácil.
@@ -54,12 +55,13 @@ const BookBanner = () => {
           </Box>
         </Box>
         <Image
-          src="/images/libro-animalescr.png"
+          src="/images/book-crAnimals.png"
           alt=""
-          w={{ base: '100%', sm: '275px', md: '382px', lg: '430px' }}
-          position={{ base: 'relative', sm: 'absolute' }}
-          mt={{ base: '0', sm: '80px', md: '76px', lg: '60px' }}
-          ml={{ base: '0', sm: '260px', md: '396px', lg: '450px' }}
+          w={{ base: '100%', sm: '270px', md: '382px', lg: '430px' }}
+          position="absolute"
+          zIndex="1"
+          mt={{ base: '0px', sm: '80px', md: '76px', lg: '60px' }}
+          ml={{ base: '0px', sm: '220px', md: '396px', lg: '450px' }}
         />
       </Box>
     </Box>
