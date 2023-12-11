@@ -42,11 +42,6 @@ export const books = [
     media: <ImageComponent source={nosConocemosBook} />,
     cta: [<BuyBtn key={2} />],
   },
-  {
-    id: "prueba",
-    title: "¿Nos conocemos?",
-    description: "This is the description",
-  },
 ];
 
 export const appNavigation = [
