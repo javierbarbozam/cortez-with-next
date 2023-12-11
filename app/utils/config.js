@@ -5,6 +5,7 @@ import methodImg from "../../public/images/kid-and-woman.png";
 import goalsImg from "../../public/images/kids-studying.png";
 import appImg from "../../public/images/video-preview.png";
 import nosConocemosBook from "../../public/images/book-crAnimals.png";
+import { AppStoreLink, GooglePlayLink } from "../components/StoreLink";
 
 const ImageComponent = ({ source }) => (
   <Image
@@ -36,9 +37,10 @@ export const books = [
   {
     id: "nos-conocemos",
     title: "¿Nos conocemos?",
-    subtitle: 'Sobre el libro',
-    description: "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
-    price: 'Ordélano a tan solo: ₡21.000',
+    subtitle: "Sobre el libro",
+    description:
+      "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
+    price: "Ordélano a tan solo: ₡21.000",
     media: <ImageComponent source={nosConocemosBook} />,
     cta: [<BuyBtn key={2} />],
   },
@@ -117,5 +119,6 @@ export const pagesData = {
     media: <ImageComponent source={appImg} />,
     description:
       "Sumérgete en el mundo colorido de los animales costarricenses con nuestra aplicación, la cual fusiona la lectura con innovación tecnológica para una experiencia educativa única.",
+    cta: [<AppStoreLink key={0} />, <GooglePlayLink key={1} />],
   },
 };

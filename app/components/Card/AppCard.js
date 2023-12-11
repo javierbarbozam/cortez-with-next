@@ -9,5 +9,6 @@ export const AppCard = () => (
     title={app.title}
     info={app.description}
     media={app.media}
+    cta={app.cta}
   />
 );
