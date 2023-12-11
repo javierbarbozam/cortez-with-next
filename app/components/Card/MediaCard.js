@@ -9,7 +9,7 @@ import {
   CardFooter,
 } from "@chakra-ui/react";
 
-const RowCard = ({ direction, media, title, info, cta }) => (
+const RowCard = ({ direction, media, title, info, price, cta }) => (
   <Card variant="mediaCard" direction={{ base: "column", sm: direction }}>
     <Box width={{ base: "100%", md: "50%" }} height="auto">
       {media}
@@ -28,6 +28,7 @@ const RowCard = ({ direction, media, title, info, cta }) => (
           </Heading>
         </CardHeader>
         <Text fontSize={["md", "md", "xl"]}>{info}</Text>
+        {price ? <Text fontFamily="kg_blank" fontSize={["md", "md", "xl"]} pt='15px'>{price}</Text> : null}
       </CardBody>
       {cta ? <CardFooter>{cta.map((element) => element)}</CardFooter> : null}
     </Box>
@@ -59,13 +60,14 @@ const ColumnCard = ({ media, title, info, cta }) => (
   </Card>
 );
 
-export const MediaCard = ({ direction = "row", media, title, info, cta }) =>
+export const MediaCard = ({ direction = "row", media, title, info, price, cta }) =>
   direction !== "column" ? (
     <RowCard
       direction={direction}
       media={media}
       title={title}
       info={info}
+      price={price}
       cta={cta}
     />
   ) : (

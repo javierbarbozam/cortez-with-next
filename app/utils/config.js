@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import methodImg from "../../public/images/kid-and-woman.png";
 import goalsImg from "../../public/images/kids-studying.png";
 import appImg from "../../public/images/video-preview.png";
+import nosConocemosBook from "../../public/images/book-crAnimals.png";
 
 const ImageComponent = ({ source }) => (
   <Image
@@ -25,16 +26,21 @@ const MethodCta = () => (
   </Link>
 );
 
+const BuyBtn = () => (
+  <Link variant="yellowBg" as={NextLink} href="">
+    ¡Haz tu pedido ya!
+  </Link>
+);
+
 export const books = [
   {
     id: "nos-conocemos",
     title: "¿Nos conocemos?",
-    description: "This is the description",
-  },
-  {
-    id: "prueba",
-    title: "¿Nos conocemos?",
-    description: "This is the description",
+    subtitle: 'Sobre el libro',
+    description: "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
+    price: 'Ordélano a tan solo: ₡21.000',
+    media: <ImageComponent source={nosConocemosBook} />,
+    cta: [<BuyBtn key={2} />],
   },
 ];
 
