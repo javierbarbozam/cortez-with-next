@@ -28,7 +28,7 @@ const RowCard = ({ direction, media, title, info, price, cta }) => (
           </Heading>
         </CardHeader>
         <Text fontSize={["md", "md", "xl"]}>{info}</Text>
-        <Text fontFamily="kg_blank" fontSize={["md", "md", "xl"]} pt='15px'>{price}</Text>
+        {price ? <Text fontFamily="kg_blank" fontSize={["md", "md", "xl"]} pt='15px'>{price}</Text> : null}
       </CardBody>
       {cta ? <CardFooter>{cta.map((element) => element)}</CardFooter> : null}
     </Box>

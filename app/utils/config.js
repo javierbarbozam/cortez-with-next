@@ -26,6 +26,12 @@ const MethodCta = () => (
   </Link>
 );
 
+const BuyBtn = () => (
+  <Link variant="yellowBg" as={NextLink} href="">
+    ¡Haz tu pedido ya!
+  </Link>
+);
+
 export const books = [
   {
     id: "nos-conocemos",
@@ -34,6 +40,7 @@ export const books = [
     description: "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
     price: 'Ordélano a tan solo: ₡21.000',
     media: <ImageComponent source={nosConocemosBook} />,
+    cta: [<BuyBtn key={2} />],
   },
   {
     id: "prueba",

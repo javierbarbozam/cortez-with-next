@@ -23,6 +23,7 @@ export default function Page({ params }) {
           title={data.subtitle}
           info={data.description}
           price={data.price}
+          cta={data.cta}
         />
         <AppCard />
       </Container>
