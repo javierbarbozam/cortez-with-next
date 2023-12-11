@@ -35,7 +35,7 @@ const RowCard = ({ direction, media, title, info, price, cta }) => (
   </Card>
 );
 
-const ColumnCard = ({ media, title, info, price, cta }) => (
+const ColumnCard = ({ media, title, info, cta }) => (
   <Card variant="columnCard">
     <Box width="100%" height={{ base: "150px", md: "250px" }}>
       {media}
@@ -48,7 +48,6 @@ const ColumnCard = ({ media, title, info, price, cta }) => (
           </Heading>
         </CardHeader>
         <Text fontSize={["md", "md", "xl"]}>{info}</Text>
-        <Text fontSize={["md", "md", "xl"]}>{price}</Text>
       </CardBody>
       {cta ? (
         <CardFooter>
@@ -72,5 +71,5 @@ export const MediaCard = ({ direction = "row", media, title, info, price, cta })
       cta={cta}
     />
   ) : (
-    <ColumnCard media={media} title={title} info={info} price={price} cta={cta} />
+    <ColumnCard media={media} title={title} info={info} cta={cta} />
   );
