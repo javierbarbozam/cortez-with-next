@@ -7,13 +7,15 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import { appNavigation } from "../../utils/config";
 import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
 
-const NavBar = ({ displayType, customEvent, spacing = '0' }) => {
+import { usePathname } from "next/navigation";
+
+const NavBar = ({ displayType, spacing = '0' }) => {
   return (
     <UnorderedList display={displayType} gap='4' spacing={spacing}>
       {appNavigation.map((link, index) => (
@@ -24,7 +26,6 @@ const NavBar = ({ displayType, customEvent, spacing = '0' }) => {
             href={link.href}
             onClick={() => {
               toggleBodyOverflow();
-              customEvent();
             }}
           >
             {link.text}
@@ -44,6 +45,12 @@ const DesktopNav = () => {
 };
 
 const MobileNav = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setModalDisplay("none")
+  }, [pathname])
+
   const [modalDisplay, setModalDisplay] = useState("none");
 
   return (
@@ -105,7 +112,7 @@ const MobileNav = () => {
           bg="transparent"
           icon={<CloseIcon />}
         ></IconButton>
-        <NavBar displayType='initial' spacing="10" customEvent={() => setModalDisplay("none")} />
+        <NavBar displayType='initial' spacing="10" />
       </Box>
     </>
   );
