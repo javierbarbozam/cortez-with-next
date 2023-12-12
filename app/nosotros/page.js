@@ -28,7 +28,7 @@ export default function AboutUs() {
           />
           <MediaCard
             direction="column"
-            media={goals.media}
+            media={vision.media}
             title={vision.title}
             info={vision.description}
           />
