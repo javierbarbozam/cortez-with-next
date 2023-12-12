@@ -3,7 +3,6 @@ import {
   ListItem,
   UnorderedList,
   Link,
-  VisuallyHidden,
   Container,
 } from "@chakra-ui/react";
 import Image from "next/image";

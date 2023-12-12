@@ -9,6 +9,7 @@ import {
   TabPanel,
   Container,
   AspectRatio,
+  Grid,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { pagesData } from "../utils/config";
@@ -38,7 +39,13 @@ const Reality = () => {
 const Doman = () => (
   <>
     <DescriptionCard description={doman.description[0]} />
-    INSERT IMAGE INSERT IMAGE
+    <Grid
+      templateColumns={{ base: "repeat(2, 1fr)" }}
+      margin={{ base: "30px 0" }}
+      gap={{base: "30px"}}
+    >
+      {doman.media.map((element) => element)}
+    </Grid>
     <DescriptionCard description={doman.description[1]} />
   </>
 );
