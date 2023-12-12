@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import methodImg from "../../public/images/kid-and-woman.png";
-import goalsImg from "../../public/images/kids-studying.png";
-import appImg from "../../public/images/video-preview.png";
+import methodImg from "../../public/images/method-img.webp";
+import objectivesImg from "../../public/images/objectives.webp";
+import appImg from "../../public/images/download-app.webp";
+import visionImg from "../../public/images/vision-img.webp";
+import missionImg from "../../public/images/mission-img.webp";
 import nosConocemosBook from "../../public/images/book-crAnimals.png";
 import { AppStoreLink, GooglePlayLink } from "../components/StoreLink";
 
@@ -85,18 +87,19 @@ export const pagesData = {
       title: "Objetivos",
       description:
         "Buscar constantemente nuevas formas creativas de enseñar a leer, ya sea a través de libros, juegos interactivos, aplicaciones o programas educativos adaptados a las necesidades y preferencias de los niños.",
-      media: <ImageComponent source={goalsImg} />,
+      media: <ImageComponent source={objectivesImg} />,
     },
     mission: {
       title: "Misión",
       description:
         "En Cortez Amarillo, inspiramos a los niños a través de recursos educativos innovadores, fomentando la pasión por la lectura y la alfabetización en todos los rincones.",
-      media: <ImageComponent source={goalsImg} />,
+      media: <ImageComponent source={missionImg} />,
     },
     vision: {
       title: "Visión",
       description:
         "Visualizamos un mundo donde cada niño, sin importar su origen, descubra la riqueza de las palabras, desarrollando una pasión duradera por la lectura, y buscamos expandir nuestro impacto educativo hacia nuevas audiencias",
+      media: <ImageComponent source={visionImg} />,
     },
   },
   methodology: {
