@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export function OnvoPayment({ id }) {
   const onvoRef = useRef(null);
