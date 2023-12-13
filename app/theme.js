@@ -7,6 +7,7 @@ import { tabsVariants } from "./theme/components/Tabs";
 import { linkVariants } from "./theme/components/Link";
 import { card } from "./theme/components/Card";
 import { containerTheme } from './theme/components/Container';
+import { modalTheme } from "./theme/components/Modal";
 
 export const theme = extendTheme({
   colors,
@@ -42,5 +43,6 @@ export const theme = extendTheme({
     Tabs: tabsVariants,
     Link: linkVariants,
     Container: containerTheme,
+    Modal: modalTheme
   },
 });
