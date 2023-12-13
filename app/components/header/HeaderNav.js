@@ -15,7 +15,7 @@ import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
 import { usePathname } from "next/navigation";
 
 const NavBar = ({ displayType, spacing = "0" }) => {
-  const [disabledItem, setDisabledItem] = useState(0);
+  const [disabledItem, setDisabledItem] = useState(null);
 
   const handleItemClick = (index) => {
     setDisabledItem(index);
