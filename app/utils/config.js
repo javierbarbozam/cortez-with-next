@@ -74,7 +74,7 @@ export const pagesData = {
     learningMethod: {
       title: "Explora nuestro método de enseñanza",
       description:
-        "El libro está diseñado en su totalidad para que se construya una experiencia positiva y divertida alrededor de la incursión en la lectura.  El uso de frases cortas y sencillas, la rima y la temática, fueron escogidos y probados con grupos de niños en etapas iniciales de aprendizaje de lectura con resultados muy positivos..",
+        "El libro está diseñado en su totalidad para que se construya una experiencia positiva y divertida alrededor de la incursión en la lectura.  El uso de frases cortas y sencillas, la rima y la temática, fueron escogidos y probados con grupos de niños en etapas iniciales de aprendizaje de lectura con resultados muy positivos.",
       media: <ImageComponent source={methodImg} />,
       cta: [<MethodCta key={1} />],
     },
