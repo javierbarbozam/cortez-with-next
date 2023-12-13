@@ -1,10 +1,12 @@
 "use server"
 
 import { OnvoPayment } from '../components/OnvoPayment';
+import { useRouter } from 'next/navigation';
 
 import axios from 'axios';
 
 export default async function Onvo() {
+  const router = useRouter();
   async function getPaymentIntent(amount = 100000, description = 'my first payment intent 3') {
     const { data, status } = await axios.post('https://api.onvopay.com/v1/payment-intents',
       {
@@ -20,8 +22,7 @@ export default async function Onvo() {
     );
 
     if (status == 201) {
-      // Payment intent id to pass down to the front-end
-      console.log(data.id);
+      router.push('/pago-confirmado');
     }
 
     return data.id;
