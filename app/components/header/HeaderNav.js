@@ -7,25 +7,29 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import { appNavigation } from "../../utils/config";
 import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
+import { usePathname } from "next/navigation";
 
-const NavBar = ({ displayType, customEvent, spacing = '0' }) => {
+const NavBar = ({ displayType, spacing = "0" }) => {
+  const [disabledItem, setDisabledItem] = useState(0);
+
+  const handleItemClick = (index) => {
+    setDisabledItem(index);
+  };
+
   return (
-    <UnorderedList display={displayType} gap='4' spacing={spacing}>
+    <UnorderedList display={displayType} gap="4" spacing={spacing}>
       {appNavigation.map((link, index) => (
-        <ListItem key={index}>
+        <ListItem key={index} onClick={() => handleItemClick(index)}>
           <Link
             variant="header"
+            disabled={index === disabledItem}
             as={NextLink}
             href={link.href}
-            onClick={() => {
-              toggleBodyOverflow();
-              customEvent();
-            }}
           >
             {link.text}
           </Link>
@@ -38,12 +42,19 @@ const NavBar = ({ displayType, customEvent, spacing = '0' }) => {
 const DesktopNav = () => {
   return (
     <Box as="nav" display={["none", "none", "initial"]}>
-      <NavBar displayType='flex'/>
+      <NavBar displayType="flex" />
     </Box>
   );
 };
 
 const MobileNav = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setModalDisplay("none");
+    toggleBodyOverflow("visible");
+  }, [pathname]);
+
   const [modalDisplay, setModalDisplay] = useState("none");
 
   return (
@@ -52,7 +63,7 @@ const MobileNav = () => {
         color="white"
         display={["block", "block", "none"]}
         onClick={() => {
-          toggleBodyOverflow();
+          toggleBodyOverflow("hidden");
           setModalDisplay("flex");
         }}
         _hover={{ bg: "transparent" }}
@@ -62,7 +73,10 @@ const MobileNav = () => {
         icon={<HamburgerIcon />}
       ></IconButton>
       <Box
-        onClick={() => setModalDisplay("none")}
+        onClick={() => {
+          setModalDisplay("none");
+          toggleBodyOverflow("visible");
+        }}
         position="absolute"
         zIndex="10"
         top="0"
@@ -80,20 +94,20 @@ const MobileNav = () => {
         alignItems="flexstart"
         flexDirection="column"
         bg="primary"
-        width={["50vw", '40vw']}
+        width={["50vw", "40vw"]}
         height="100vh"
         position="absolute"
         zIndex="10"
         top="0"
         right="0"
-        px={['3', '3']}
+        px={["3", "3"]}
         pt="6"
         borderLeft="6px solid"
         borderLeftColor="secondary.normal"
       >
         <IconButton
           onClick={() => {
-            toggleBodyOverflow();
+            toggleBodyOverflow("visible");
             setModalDisplay("none");
           }}
           display="flex"
@@ -105,7 +119,7 @@ const MobileNav = () => {
           bg="transparent"
           icon={<CloseIcon />}
         ></IconButton>
-        <NavBar displayType='initial' spacing="10" customEvent={() => setModalDisplay("none")} />
+        <NavBar displayType="initial" spacing="10" />
       </Box>
     </>
   );
@@ -113,11 +127,9 @@ const MobileNav = () => {
 
 export const HeaderNav = () => {
   return (
-    // Header
     <>
       <DesktopNav />
       <MobileNav />
     </>
-    // Header
   );
 };
