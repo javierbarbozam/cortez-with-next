@@ -108,7 +108,7 @@ export const pagesData = {
     augmented_reality: {
       title: "Lectura que Cobre Vida: Descubre la Realidad Aumentada",
       description:
-        "La Realidad Aumentada (RA) fusiona ambientes virtuales con el mundo físico mediante dispositivos como teléfonos móviles y tabletas. Sus características clave incluyen la fusión entre el mundo real y virtual. Al escanear las páginas de los libros de CortezAmarillo con un dispositivo móvil, aparecen elementos ilustrados con animaciones, música y sonidos que complementan el texto.  La experiencia contribuye a que los niños recuerden mejor lo que leen y los motiva a seguir el proceso de lectura.",
+        "La Realidad Aumentada (RA) fusiona ambientes virtuales con el mundo físico mediante dispositivos como teléfonos móviles y tabletas. Sus características clave incluyen la fusión entre el mundo real y virtual. Al escanear las páginas de los libros de CortezAmarillo con un dispositivo móvil, aparecen elementos ilustrados con animaciones, música y sonidos que complementan el texto. La experiencia contribuye a que los niños recuerden mejor lo que leen y los motiva a seguir el proceso de lectura.",
     },
     doman: {
       title:
