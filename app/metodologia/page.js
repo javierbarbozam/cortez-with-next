@@ -24,12 +24,10 @@ const Reality = () => {
   return (
     <>
       <DescriptionCard description={augmented_reality.description} />
-      <AspectRatio maxW="560px" ratio={16 / 9}>
-        <iframe
-          title="naruto"
-          src="https://www.youtube.com/embed/QhBnZ6NPOY0"
-          allowFullScreen
-        />
+      <AspectRatio maxW="900px" ratio={16 / 9} ml={{ md: "5px" }} mt="10  px" mb="10px">
+        <video width="100%" height="100%" controls allowFullScreen>
+          <source src="/video/videoBallena.mp4" type="video/mp4" />
+        </video>
       </AspectRatio>
       <AppCard />
     </>
@@ -42,7 +40,7 @@ const Doman = () => (
     <Grid
       templateColumns={{ base: "repeat(2, 1fr)" }}
       margin={{ base: "30px 0" }}
-      gap={{base: "30px"}}
+      gap={{ base: "30px" }}
     >
       {doman.media.map((element) => element)}
     </Grid>
