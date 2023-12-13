@@ -1,15 +1,15 @@
-import { Container, Heading, Link } from "@chakra-ui/react";
-import NextLink from 'next/link'
+import { Container, Heading } from "@chakra-ui/react";
 import Contact from '../components/CardContact';
-import Form from '../components/form';
-
+import ContactForm from '../components/form/ContactForm';
+import OrderForm from '../components/form/OrderForm';
 export default function AboutUs() {
   return (
     <main>
       <Container centerContent>
         <Heading>Contacto</Heading>
         <Contact />
-        <Form />
+        <ContactForm />
+        <OrderForm />
       </Container>
     </main>
   );

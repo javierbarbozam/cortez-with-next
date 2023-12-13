@@ -12,7 +12,6 @@ import {
   Box
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { sendContactForm } from '@/lib/api';
 
 const margin = {
   mb: {
@@ -21,19 +20,22 @@ const margin = {
   }
 }
 
-export default function Form() {
+export default function OrderForm() {
   const initialState = {
     name: '',
     lastName: '',
     email: '',
-    message: '',
+    number: '',
+    address: '',
+    product: '',
+    description: '',
   }
 
-  const [formData, setFormData] = useState(initialState);
+  const [orderData, setOrderData] = useState(initialState);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prevData) => ({
+    setOrderData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -42,8 +44,8 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await sendContactForm(formData);
-      setFormData(initialState);
+      await 'onvo';
+      setOrderData(initialState);
     } catch (error) {
       console.error('Error al enviar el formulario', error);
     }
@@ -51,17 +53,17 @@ export default function Form() {
   return (
     <Card w='100%' p={{ base: '24px', md: '40px' }}>
       <Box w={{ sm: '400px', md: '570px' }} m='auto'>
-        <Heading align='center'>Preguntas, Comentarios, ¡Nos Encantaría Escucharte!</Heading>
+        <Heading align='center'>Datos de envío</Heading>
         <FormControl onSubmit={handleSubmit} as='form' mt={{ base: '30px', md: '40px' }} isRequired>
           <Flex flexDirection={{ base: 'column', md: 'row' }} gap={{md: '32px' }}>
             <Box w={{ md: '50%' }} {...margin}>
-              <FormLabel htmlFor='nombre'>Nombre</FormLabel>
+              <FormLabel htmlFor='name'>Nombre</FormLabel>
               <Input 
-                id='nombre' 
+                id='name' 
                 type='text' 
                 bgColor='#E1ECEC' 
                 name='name' 
-                value={formData.name} 
+                value={orderData.name} 
                 onChange={handleInputChange} 
               />
             </Box>
@@ -72,26 +74,57 @@ export default function Form() {
                 type='text' 
                 bgColor='#E1ECEC' 
                 name='lastName' 
-                value={formData.lastName} 
-                onChange={handleInputChange} 
+                value={orderData.lastName }
+                onChange={handleInputChange}
               />
             </Box>
           </Flex>
-          <FormLabel htmlFor='correo'>Email</FormLabel>
+          <FormLabel htmlFor='email'>Correo</FormLabel>
           <Input 
-            id='correo' 
+            id='email' 
             type='email' 
             bgColor='#E1ECEC' 
             {...margin}
-            name='email' value={formData.email} 
-            onChange={handleInputChange}
+            name='email' 
+            value={orderData.email}
+            onChange={handleInputChange} 
           />
-          <FormLabel htmlFor='message'>Mensaje</FormLabel>
-          <Textarea 
-            id='message' 
+          <FormLabel htmlFor='number'>Numero</FormLabel>
+          <Input 
+            id='number' 
+            type='number' 
             bgColor='#E1ECEC' 
-            name='message' 
-            value={formData.message} 
+            {...margin}
+            name='number' 
+            value={orderData.number}
+            onChange={handleInputChange} 
+          />
+          <FormLabel htmlFor='address'>Dirección de envio</FormLabel>
+          <Input 
+            id='address' 
+            type='text' 
+            bgColor='#E1ECEC' 
+            {...margin}
+            name='address' 
+            value={orderData.address}
+            onChange={handleInputChange} 
+          />
+          <FormLabel htmlFor='products'>Cantidad de productos</FormLabel>
+          <Input 
+            id='products' 
+            type='number' 
+            bgColor='#E1ECEC' 
+            {...margin}
+            name='products' 
+            value={orderData.product}
+            onChange={handleInputChange} 
+          />
+          <FormLabel htmlFor='description'>Descripción</FormLabel>
+          <Textarea 
+            id='description' 
+            bgColor='#E1ECEC' 
+            name='description' 
+            value={orderData.description}
             onChange={handleInputChange} 
           ></Textarea>
           <Flex justifyContent='center'>
