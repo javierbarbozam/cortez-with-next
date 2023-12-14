@@ -43,9 +43,9 @@ export const books = [
     title: "¿Nos conocemos?",
     subtitle: "Sobre el libro",
     description:
-    "Con este libro creás una conexión emocional a través de la lectura.\n\
+      "Con este libro creás una conexión emocional a través de la lectura.\n\
     Descubre cómo combinamos lo tradicional y lo tecnológico para crear un vínculo único en las etapas tempranas del aprendizaje. Únete a nosotros en este viaje lleno de historias y descubrimientos.",
-        price: "Ordélano a tan solo: ₡21.000",
+    price: "Ordénalo a tan solo: ₡21.000",
     media: <ImageComponent source={nosConocemosBook} />,
     cta: [<BuyBtn key={2} />],
   },
@@ -84,7 +84,8 @@ export const pagesData = {
     history: {
       title: "Nuestra historia",
       description:
-      "Durante la pandemia del 2020, al presenciar la lucha de mi hija en primer grado con la lectura remota, noté la falta de interés infantil por leer. Descubrí que el 75% de los alumnos de primaria en Costa Rica enfrenta dificultades en comprensión lectora, según estadísticas alarmantes. Estudios del MIT enfatizan la efectividad de combinar imagen, texto y audio, siendo un 80% más memorable que solo texto. Estas reflexiones me motivaron a crear un libro que haga la lectura emocionante. Planeo usar realidad aumentada para explorar frases, rimas y un vasto conocimiento."    },
+        "Durante la pandemia del 2020, al presenciar el desafío de mi hija en aprender a leer desde casa, noté la falta de interés de los niños por la lectura. Descubrí que el 75% de los alumnos de primaria en Costa Rica enfrenta dificultades en comprensión lectora, una estadística preocupante. Estudios del MIT revelan la efectividad de combinar imagen, texto y audio, siendo un 80% más memorable que solo texto. Estas reflexiones me motivaron a crear un libro que haga la lectura emocionante. Planeo usar realidad aumentada para explorar frases, rimas y un vasto mundo de conocimiento."
+    },
     goals: {
       title: "Objetivos",
       description:
@@ -114,9 +115,9 @@ export const pagesData = {
       title: "Explora nuestro método de enseñanza: Aprende sobre el Método Doman",
       description: [
         "Nuestra redacción se inspira en el método DOMAN para la enseñanza de la lectura. Creado por el médico Glenn Doman, este método busca aprovechar al máximo las capacidades del niño al leer una palabra y comprender su significado. A diferencia del enfoque fonético, común en muchos centros educativos, este método asegura la comprensión al leer, evitando una lectura mecánica y lenta a largo plazo, algo ineficiente para aquellos que leen sin comprensión.",
-        "¿Qué pasa si el niño no ha pasado por las otras etapas del método DOMAN?\nEl libro está diseñado en su totalidad para que se construya una experiencia positiva y divertida alrededor de la incursión en la lectura.\nEl uso de frases cortas y sencillas, la rima y la temática, fueron escogidos y probados con grupos de niños en etapas iniciales de aprendizaje de lectura con resultados muy positivos."
+        "El libro está diseñado para crear una experiencia positiva y divertida en torno a la lectura. Frases simples de SUJETO+VERBO+COMPLEMENTO, cortas, rima y temática fueron seleccionadas y probadas con niños en etapas iniciales de aprendizaje, con resultados muy positivos. El uso de la experiencia interactiva se añade como un factor divertido que involucre las emociones de los niños y les invite a volver al libro."
       ],
-      media: [<ImageComponent key={0} source={domanFirstImg}/>,<ImageComponent key={1} source={domanSecondImg}/>]
+      media: [<ImageComponent key={0} source={domanFirstImg} />, <ImageComponent key={1} source={domanSecondImg} />]
     },
   },
   app: {
