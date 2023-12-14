@@ -33,7 +33,7 @@ const MethodCta = () => (
 
 const BuyBtn = () => (
   <Link variant="yellowBg" as={NextLink} href="">
-    ¡Haz tu pedido ya!
+    ¡compralo ahora!
   </Link>
 );
 
@@ -43,8 +43,9 @@ export const books = [
     title: "¿Nos conocemos?",
     subtitle: "Sobre el libro",
     description:
-      "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
-    price: "Ordélano a tan solo: ₡21.000",
+    "Con este libro creás una conexión emocional a través de la lectura.\n\
+    Descubre cómo combinamos lo tradicional y lo tecnológico para crear un vínculo único en las etapas tempranas del aprendizaje. Únete a nosotros en este viaje lleno de historias y descubrimientos.",
+        price: "Ordélano a tan solo: ₡21.000",
     media: <ImageComponent source={nosConocemosBook} />,
     cta: [<BuyBtn key={2} />],
   },
@@ -83,8 +84,7 @@ export const pagesData = {
     history: {
       title: "Nuestra historia",
       description:
-      "Durante la pandemia de 2020, al presenciar cómo mi hija, en primer grado, enfrentaba el desafío de aprender a leer desde casa, me di cuenta de la falta de interés general de los niños por la lectura. Investigando, descubrí que el 75% de los estudiantes de primaria en Costa Rica tiene dificultades para comprender lo que lee, una estadística preocupante según el Estado de la Educación Costarricense. Al profundizar, encontré estudios del MIT que revelan la efectividad de la combinación de imagen, texto y audio, siendo un 80% más memorable que el uso exclusivo de texto, y cómo las experiencias emocionales se graban mejor en la memoria. Estas reflexiones me impulsaron a plantear la idea de crear un libro que haga que la lectura sea divertida y emocionante para los niños. Quiero utilizar la realidad aumentada para involucrarlos en la exploración de frases, rimas y, en el futuro, en un vasto mundo de conocimiento."
-    },
+      "Durante la pandemia del 2020, al presenciar la lucha de mi hija en primer grado con la lectura remota, noté la falta de interés infantil por leer. Descubrí que el 75% de los alumnos de primaria en Costa Rica enfrenta dificultades en comprensión lectora, según estadísticas alarmantes. Estudios del MIT enfatizan la efectividad de combinar imagen, texto y audio, siendo un 80% más memorable que solo texto. Estas reflexiones me motivaron a crear un libro que haga la lectura emocionante. Planeo usar realidad aumentada para explorar frases, rimas y un vasto conocimiento."    },
     goals: {
       title: "Objetivos",
       description:
@@ -111,11 +111,10 @@ export const pagesData = {
         "La Realidad Aumentada (RA) fusiona ambientes virtuales con el mundo físico mediante dispositivos como teléfonos móviles y tabletas. Sus características clave incluyen la fusión entre el mundo real y virtual, interacción inmediata y el uso completo de las capacidades del entorno. Al escanear las páginas de los libros de CortezAmarillo con un dispositivo móvil, aparecen elementos ilustrados con animaciones, música y sonidos que complementan el texto.",
     },
     doman: {
-      title:
-        "Explora nuestro método de enseñanza: Aprende sobre el Método Doman",
-        description: [
-          "Nuestra redacción se inspira en el método DOMAN para la enseñanza de la lectura. Creado por el médico Glenn Doman, este método busca aprovechar al máximo las capacidades del niño al leer una palabra y comprender su significado. A diferencia del enfoque fonético, común en muchos centros educativos, este método asegura la comprensión al leer, evitando una lectura mecánica y lenta a largo plazo, algo ineficiente para aquellos que leen sin comprensión.",
-          "Nuestro libro se encuentra en la quinta fase del método, presentando cuentos con frases simples (SUJETO+VERBO+COMPLEMENTO) y letra grande, separada de las ilustraciones."
+      title: "Explora nuestro método de enseñanza: Aprende sobre el Método Doman",
+      description: [
+        "Nuestra redacción se inspira en el método DOMAN para la enseñanza de la lectura. Creado por el médico Glenn Doman, este método busca aprovechar al máximo las capacidades del niño al leer una palabra y comprender su significado. A diferencia del enfoque fonético, común en muchos centros educativos, este método asegura la comprensión al leer, evitando una lectura mecánica y lenta a largo plazo, algo ineficiente para aquellos que leen sin comprensión.",
+        "¿Qué pasa si el niño no ha pasado por las otras etapas del método DOMAN?\nEl libro está diseñado en su totalidad para que se construya una experiencia positiva y divertida alrededor de la incursión en la lectura.\nEl uso de frases cortas y sencillas, la rima y la temática, fueron escogidos y probados con grupos de niños en etapas iniciales de aprendizaje de lectura con resultados muy positivos."
       ],
       media: [<ImageComponent key={0} source={domanFirstImg}/>,<ImageComponent key={1} source={domanSecondImg}/>]
     },
