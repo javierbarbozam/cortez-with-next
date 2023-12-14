@@ -3,7 +3,7 @@ import Contact from '../components/CardContact';
 
 export default function AboutUs() {
   return (
-    <main>
+    <main style={{ height: '58%' }}>
       <Container centerContent>
         <Heading>Contacto</Heading>
         <Contact />
