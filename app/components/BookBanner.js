@@ -1,4 +1,4 @@
-import { Box, Link, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Link, Heading, Text, Image, Flex } from '@chakra-ui/react';
 import NextLink from "next/link";
 
 const BookBanner = () => {
@@ -9,9 +9,9 @@ const BookBanner = () => {
       w="100%"
       h={{ base: '340px', sm: '320px', md: '400px', lg: '430px' }}
       color="#394d51"
-      mb={{ base: '80%', sm:'0'}}
+      mb={{ base: '80%', sm: '0' }}
     >
-      <Box 
+      <Box
         mx="auto"
         display={{ base: 'block', sm: 'flex' }}
         h={{ base: '340px', sm: '320px', md: '400px', lg: '430px' }}
@@ -21,22 +21,19 @@ const BookBanner = () => {
         bg="rgba(255, 255, 255, 0.8)"
       >
         <Box
-          ml={{ base: '34px', sm: '-175px', md: '-260px', lg: '-400px' }}
+          ml={{ base: '4%', sm: '-30%', md: '-30%', lg: '-25%' }}
+          w={{ base: '92%', sm: '40%', md: '40%', lg: '45%' }}
         >
           <Heading
             fontSize={{ base: '18px', sm: '16px', md: '22px', lg: '30px' }}
             mb="15px"
-            pt={{ base: '30px', sm: '30px', md: '50px', lg: '50px' }}
-            mt={{ base: '0', sm: '15px', md: '50px', lg: '50px' }}
-            textAlign={{ base: 'left', sm: 'left' }}
-            w={{ base: '220px', sm: '230px', md: '370px', lg: '500px' }}
+            pt={{ base: '5%', sm: '5%', md: '10%', lg: '5%' }}
+            textAlign="left"
           >
             ¡Abre las páginas y descubre la magia de Costa Rica!
           </Heading>
           <Text
             fontSize={{ base: '14px', sm: '14px', md: '18px', lg: '20px' }}
-            w={{ base: '230px', sm: '230px', md: '350px', lg: '500px' }}
-            textAlign={{ base: 'left', sm: 'left' }}
           >
             Cada animal tiene una historia. Leerla y verla cobrar vida nunca había sido tan fácil.
           </Text>
@@ -57,11 +54,11 @@ const BookBanner = () => {
         <Image
           src="/images/book-crAnimals.png"
           alt=""
-          w={{ base: '100%', sm: '270px', md: '382px', lg: '430px' }}
+          w={{ base: '100%', sm: '42%', md: '40%', lg: '35%' }}
           position="absolute"
           zIndex="1"
           mt={{ base: '0px', sm: '80px', md: '76px', lg: '60px' }}
-          ml={{ base: '0px', sm: '220px', md: '396px', lg: '450px' }}
+          ml={{ base: '0px', sm: '40%', md: '42%', lg: '42%' }}
         />
       </Box>
     </Box>
