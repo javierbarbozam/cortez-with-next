@@ -18,9 +18,9 @@ const iconProps = {
 }
 
 const socialMedia = [
-  { icon: <Instagram {...iconProps} />, title: 'cortezamarillo_cr', link: 'https://www.instagram.com/cortezamarillo_cr/' },
-  { icon: <PhoneIcon {...iconProps} />, title: '8838-1532', link: 'tel:88381532' },
-  { icon: <EmailIcon {...iconProps} />, title: 'hola@cortezamarillo-cr.com', link: 'mailto:hola@cortezamarillo-cr.com' }
+  { icon: <Instagram {...iconProps} />, title: 'Instagram', link: 'https://www.instagram.com/cortezamarillo_cr/' },
+  { icon: <PhoneIcon {...iconProps} />, title: 'Teléfono', link: 'tel:88381532' },
+  { icon: <EmailIcon {...iconProps} />, title: 'Correo electrónico', link: 'mailto:hola@cortezamarillo-cr.com' }
 ];
 
 export default function Contact() {
