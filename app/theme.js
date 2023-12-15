@@ -17,6 +17,7 @@ export const theme = extendTheme({
       body: {
         fontFamily: fonts.questrial,
         bg: "background",
+        height: '100vh'
       },
       header: {
         height: ["80px", "80px", "120px"],
