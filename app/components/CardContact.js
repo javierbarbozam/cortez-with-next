@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, Heading, Grid, GridItem, Box } from '@chakra-ui/react';
+import { Card, Heading, Grid, GridItem, Box, Text } from '@chakra-ui/react';
 import Link from 'next/link'
 import { Instagram } from './SocialMediaIcon';
 import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
@@ -18,9 +18,9 @@ const iconProps = {
 }
 
 const socialMedia = [
-  { icon: <Instagram {...iconProps} />, title: 'Instagram', link: 'https://www.instagram.com/cortezamarillo_cr/' },
-  { icon: <PhoneIcon {...iconProps} />, title: 'Teléfono', link: 'tel:88381532' },
-  { icon: <EmailIcon {...iconProps} />, title: 'Correo electrónico', link: 'mailto:hola@cortezamarillo-cr.com' }
+  { icon: <Instagram {...iconProps} />, title: 'Instagram', link: 'https://www.instagram.com/cortezamarillo_cr/', contact:'cortezamarillo_cr' },
+  { icon: <PhoneIcon {...iconProps} />, title: 'Teléfono', link: 'tel:88381532', contact:'8838-1532' },
+  { icon: <EmailIcon {...iconProps} />, title: 'Correo electrónico', link: 'mailto:hola@cortezamarillo-cr.com', contact:'hola@cortezamarillo-cr.com'}
 ];
 
 export default function Contact() {
@@ -29,9 +29,16 @@ export default function Contact() {
       {socialMedia.map((network, index) => (
         <GridItem key={index}>
           <Link href={network.link}>
-            <Card h={{base:'100px', md:'170px'}} justifyContent='center' align='center' gap={{base:'10px', md:'20px'}} p='20px'>
+            <Card h={{base:'150px', md:'200px'}} justifyContent='center' align='center' gap={{base:'10px', md:'20px'}} p='20px'>
+              <Heading
+                fontWeight='700'
+                fontSize={["md", "md", "lg"]}
+                color='#394D51'
+              >
+                {network.title}
+              </Heading>
               <Box>{network.icon}</Box>
-              <Heading fontSize={{ base: '16px', md: '20px' }}>{network.title}</Heading>
+              <Text fontSize={["md", "md", "lg"]}>{network.contact}</Text>
             </Card>
           </Link>
         </GridItem>
