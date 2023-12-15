@@ -38,7 +38,7 @@ export default function Contact() {
                 {network.title}
               </Heading>
               <Box>{network.icon}</Box>
-              <Text fontSize={["md", "md", "lg"]}>{network.contact}</Text>
+              <Text textAlign="center" fontSize={["md", "md", "lg"]}>{network.contact}</Text>
             </Card>
           </Link>
         </GridItem>
