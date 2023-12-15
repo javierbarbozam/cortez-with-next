@@ -13,11 +13,10 @@ const BookBanner = () => {
               pt={{ base: "5%", sm: "5%", md: "10%", lg: "5%" }}
               textAlign="left"
             >
-              ¡Abre las páginas y descubre la magia de Costa Rica!
+              Abrí las páginas y descubrí el mundo mágico de la lectura!
             </Heading>
             <Text>
-              Cada animal tiene una historia. Leerla y verla cobrar vida nunca
-              había sido tan fácil.
+              Unimos la lectura tradicional con la innovación tecnológica de la realidad aumentada para hacer que el aprendizaje temprano sea emocionante. ¡Acompañanos en este viaje único!
             </Text>
             <Heading
               mt={{ base: "10px", sm: "20px", md: "30px", lg: "30px" }}
