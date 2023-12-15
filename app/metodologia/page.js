@@ -8,7 +8,7 @@ import {
   TabPanels,
   TabPanel,
   Container,
-  AspectRatio,
+  Box,
   Grid,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -24,13 +24,27 @@ const Reality = () => {
   return (
     <>
       <DescriptionCard description={augmented_reality.description} />
-      <AspectRatio maxW="560px" ratio={16 / 9}>
-        <iframe
-          title="naruto"
-          src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+      <Box
+        maxW="100%"
+        mt="10px"
+        mb="10px"
+        position="relative" 
+        overflow="hidden" 
+        paddingBottom="56.25%" /* Relación de aspecto 16:9 (9 dividido por 16 multiplicado por 100 para obtener el porcentaje) */
+      >
+    <Box
+          as="video"
+          width="100%"
+          height="100%"
+          position="absolute"
+          top="0"
+          left="0"
+          controls
           allowFullScreen
-        />
-      </AspectRatio>
+        >
+          <source src="/video/videoBallena.mp4" type="video/mp4" />
+        </Box>
+      </Box>
       <AppCard />
     </>
   );
@@ -42,7 +56,7 @@ const Doman = () => (
     <Grid
       templateColumns={{ base: "repeat(2, 1fr)" }}
       margin={{ base: "30px 0" }}
-      gap={{base: "30px"}}
+      gap={{ base: "30px" }}
     >
       {doman.media.map((element) => element)}
     </Grid>

@@ -1,6 +1,7 @@
 import { Providers } from "./providers";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/Footer";
+import { Box } from "@chakra-ui/react";
 
 export const metadata = {
   title: "Cortez Amarillo",
@@ -12,9 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers>
-          <Header />
-          {children}
-          <Footer />
+          <Box height="100vh" display="flex" flexDirection="column" justifyContent="space-between">
+            <Header />
+            {children}
+            <Footer />
+          </Box>
         </Providers>
       </body>
     </html>

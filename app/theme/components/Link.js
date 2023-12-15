@@ -2,7 +2,11 @@ import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 const headerLink = defineStyle({
   fontFamily: 'kg_blank',
-  color: 'white'
+  color: 'white',
+  _disabled: {
+    color: "secondary.normal",
+    cursor: "not-allowed"
+  }
 });
 
 const yellowBg = defineStyle({

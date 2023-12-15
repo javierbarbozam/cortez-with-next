@@ -33,7 +33,7 @@ const MethodCta = () => (
 
 const BuyBtn = () => (
   <Link variant="yellowBg" as={NextLink} href="">
-    ¡Haz tu pedido ya!
+    ¡compralo ahora!
   </Link>
 );
 
@@ -43,8 +43,9 @@ export const books = [
     title: "¿Nos conocemos?",
     subtitle: "Sobre el libro",
     description:
-      "En este libro, te invitamos a un emocionante recorrido por la vida salvaje de Costa Rica, donde descubrirás fascinantes animales y fortalecerás tus habilidades de lectura. ¡Aventurémonos juntos en este viaje de aprendizaje y diversión!",
-    price: "Ordélano a tan solo: ₡21.000",
+      "Con este libro creás una conexión emocional a través de la lectura.\n\
+    Descubre cómo combinamos lo tradicional y lo tecnológico para crear un vínculo único en las etapas tempranas del aprendizaje. Únete a nosotros en este viaje lleno de historias y descubrimientos.",
+    price: "Ordénalo a tan solo: ₡21.000",
     media: <ImageComponent source={nosConocemosBook} />,
     cta: [<BuyBtn key={2} />],
   },
@@ -69,12 +70,12 @@ export const pagesData = {
     about: {
       title: "¿Quiénes somos?",
       description:
-        "CortezAmarillo es una empresa costarricense de innovación en el ámbito de la educación, específicamente para brindar alternativas de lectura en etapas tempranas de aprendizaje, que combine lectura tradicional con herramientas tecnológicas para lograr un vínculo emocional y una experiencia más placentera.",
+        "CortezAmarillo es una empresa costarricense de innovación en el ámbito de la educación, específicamente para brindar alternativas de lectura en etapas tempranas de aprendizaje, que combine lectura tradicional con herramientas tecnológicas para lograr un vínculo emocional y una experiencia más divertida.",
     },
     learningMethod: {
       title: "Explora nuestro método de enseñanza",
       description:
-        "La Etapa 4 del Método Doman se enfoca en enseñar la lectura a través de tarjetas de palabras, ayudando a reconocer y leer palabras y frases temprano en el desarrollo.",
+        "El libro está diseñado en su totalidad para que se construya una experiencia positiva y divertida alrededor de la incursión en la lectura.  El uso de frases cortas y sencillas, la rima y la temática, fueron escogidos y probados con grupos de niños en etapas iniciales de aprendizaje de lectura con resultados muy positivos.",
       media: <ImageComponent source={methodImg} />,
       cta: [<MethodCta key={1} />],
     },
@@ -83,7 +84,7 @@ export const pagesData = {
     history: {
       title: "Nuestra historia",
       description:
-        "Una editorial encantada. Un equipo creativo, historias y recursos educativos. Acceso universal, imaginación sin fronteras. Compromiso, sonrisas, aprendizaje. Cada página, mundo de posibilidades. Niños, lectura, grandeza.",
+        "Durante la pandemia del 2020, al presenciar el desafío de mi hija en aprender a leer desde casa, noté la falta de interés de los niños por la lectura. Descubrí que el 75% de los alumnos de primaria en Costa Rica enfrenta dificultades en comprensión lectora, una estadística preocupante. Estudios del MIT revelan la efectividad de combinar imagen, texto y audio, siendo un 80% más memorable que solo texto. Estas reflexiones me motivaron a crear un libro que haga la lectura emocionante. Planeo usar realidad aumentada para explorar frases, rimas y un vasto mundo de conocimiento."
     },
     goals: {
       title: "Objetivos",
@@ -94,13 +95,13 @@ export const pagesData = {
     mission: {
       title: "Misión",
       description:
-        "En Cortez Amarillo, inspiramos a los niños a través de recursos educativos innovadores, fomentando la pasión por la lectura y la alfabetización en todos los rincones.",
+        "Nuestra misión es apoyar a los papás, mamás, tíos y tías, y encargados de los niños/as para que el proceso de aprender a leer sea lúdico, divertido y eficiente.  ",
       media: <ImageComponent source={missionImg} />,
     },
     vision: {
       title: "Visión",
       description:
-        "Visualizamos un mundo donde cada niño, sin importar su origen, descubra la riqueza de las palabras, desarrollando una pasión duradera por la lectura, y buscamos expandir nuestro impacto educativo hacia nuevas audiencias",
+        "Nuestra visión  es incentivar la lectura como pilar del aprendizaje, a partir del uso de nuevas tecnologías, que conecten y vinculen a los niños, de manera lúdica, con el deseo de leer.",
       media: <ImageComponent source={visionImg} />,
     },
   },
@@ -108,16 +109,15 @@ export const pagesData = {
     augmented_reality: {
       title: "Lectura que Cobre Vida: Descubre la Realidad Aumentada",
       description:
-        "La realidad aumentada (RA) redefine la interacción entre el mundo físico y digital al proporcionar una experiencia sensorial única. A través de dispositivos como smartphones y tabletas, la RA en Cortez Amarillo permite escanear las páginas para revelar animaciones cautivadoras de los elementos ilustrados. Además, se complementa con música y sonidos que dan vida al texto, creando una experiencia de lectura inmersiva y multisensorial. Esta tecnología lleva la narrativa y la educación a un nuevo nivel al transformar los libros en portales dinámicos durante la lectura.",
+        "La Realidad Aumentada (RA) fusiona ambientes virtuales con el mundo físico mediante dispositivos como teléfonos móviles y tabletas. Sus características clave incluyen la fusión entre el mundo real y virtual. Al escanear las páginas de los libros de CortezAmarillo con un dispositivo móvil, aparecen elementos ilustrados con animaciones, música y sonidos que complementan el texto. La experiencia contribuye a que los niños recuerden mejor lo que leen y los motiva a seguir el proceso de lectura.",
     },
     doman: {
-      title:
-        "Explora nuestro método de enseñanza: Aprende sobre el Método Doman",
+      title: "Explora nuestro método de enseñanza: Aprende sobre el Método Doman",
       description: [
-        "El método Doman, aboga por la estimulación temprana y el desarrollo cognitivo en niños, CortezAmarillo con esto ofrece una experiencia educativa que integra magistralmente la tradición con la innovación. Glenn Doman, pionero en el campo de la educación temprana, propuso un enfoque que destaca la importancia de estimular los sentidos desde una edad temprana para potenciar el aprendizaje. Este principio se refleja en la esencia de CortezAmarillo, donde las páginas no solo están bellamente ilustradas, sino que también se han diseñado con elementos interactivos para una mejor lectura",
-        "La mezcla única entre el método Doman y las nuevas ideas en CortezAmarillo no es solo sobre enseñar cosas; está diseñada para hacer que a los niños les encante explorar y aprender. Queremos que descubran más allá de lo que aprenden en la escuela, ayudándolos a crecer de una manera que abarque todo, más allá de las aulas. Cada libro no es solo un libro, es como un amigo que te lleva en un viaje educativo, mostrándote un mundo donde aprender es mágico y descubrir es parte de la realidad.",
+        "Nuestra redacción se inspira en el método DOMAN para la enseñanza de la lectura. Creado por el médico Glenn Doman, este método busca aprovechar al máximo las capacidades del niño al leer una palabra y comprender su significado. A diferencia del enfoque fonético, común en muchos centros educativos, este método asegura la comprensión al leer, evitando una lectura mecánica y lenta a largo plazo, algo ineficiente para aquellos que leen sin comprensión.",
+        "El libro está diseñado para crear una experiencia positiva y divertida en torno a la lectura. Frases simples de SUJETO+VERBO+COMPLEMENTO, cortas, rima y temática fueron seleccionadas y probadas con niños en etapas iniciales de aprendizaje, con resultados muy positivos. El uso de la experiencia interactiva se añade como un factor divertido que involucre las emociones de los niños y les invite a volver al libro."
       ],
-      media: [<ImageComponent key={0} source={domanFirstImg}/>,<ImageComponent key={1} source={domanSecondImg}/>]
+      media: [<ImageComponent key={0} source={domanFirstImg} />, <ImageComponent key={1} source={domanSecondImg} />]
     },
   },
   app: {
