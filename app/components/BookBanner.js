@@ -48,7 +48,7 @@ const BookBanner = () => {
         position="absolute"
         top="0"
         w="100%"
-        h={{ base: "340px", sm: "320px", md: "400px", lg: "430px" }}
+        h={{ base: "500px", sm: "420px", md: "400px", lg: "430px" }}
         opacity="0.2"
       />
     </Box>
