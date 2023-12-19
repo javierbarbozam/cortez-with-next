@@ -1,7 +1,5 @@
-import { Container, Heading, Link } from "@chakra-ui/react";
-import NextLink from 'next/link'
+import { Container, Heading } from "@chakra-ui/react";
 import Contact from '../components/CardContact';
-import Form from '../components/form';
 
 export default function AboutUs() {
   return (
@@ -9,7 +7,6 @@ export default function AboutUs() {
       <Container centerContent>
         <Heading>Contacto</Heading>
         <Contact />
-        <Form />
       </Container>
     </main>
   );

@@ -15,21 +15,17 @@ import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
 import { usePathname } from "next/navigation";
 
 const NavBar = ({ displayType, spacing = "0" }) => {
-  const [disabledItem, setDisabledItem] = useState(null);
-
-  const handleItemClick = (index) => {
-    setDisabledItem(index);
-  };
+  const pathname = usePathname();
 
   return (
     <UnorderedList display={displayType} gap="4" spacing={spacing}>
       {appNavigation.map((link, index) => (
-        <ListItem key={index} onClick={() => handleItemClick(index)}>
+        <ListItem key={index}>
           <Link
             variant="header"
-            disabled={index === disabledItem}
             as={NextLink}
             href={link.href}
+            disabled={pathname === link.href}
           >
             {link.text}
           </Link>
