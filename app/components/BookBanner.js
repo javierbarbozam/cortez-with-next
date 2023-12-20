@@ -6,18 +6,17 @@ const BookBanner = () => {
     <Box position="relative">
       <Container>
         <Flex flexDir={{ base: "column", md: "row" }} align='center' justify='space-between'>
-          <Box position="relative" zIndex="1" w={{base:'100%', md:'50%'}}>
+          <Box position="relative" zIndex="1" w={{base:'100%', md:'60%'}}>
             <Heading
               fontSize={{ base: "18px", sm: "16px", md: "22px", lg: "30px" }}
               mb="15px"
               pt={{ base: "5%", sm: "5%", md: "10%", lg: "5%" }}
               textAlign="left"
             >
-              ¡Abre las páginas y descubre la magia de Costa Rica!
+              Abrí las páginas y descubrí el mundo mágico de la lectura!
             </Heading>
             <Text>
-              Cada animal tiene una historia. Leerla y verla cobrar vida nunca
-              había sido tan fácil.
+              Unimos la lectura tradicional con la innovación tecnológica de la realidad aumentada para hacer que el aprendizaje temprano sea emocionante. ¡Acompañanos en este viaje único!
             </Text>
             <Heading
               mt={{ base: "10px", sm: "20px", md: "30px", lg: "30px" }}
@@ -37,7 +36,6 @@ const BookBanner = () => {
               src="/images/book-crAnimals.png"
               alt=""
               position='absolute'
-              top={{md:"70", lg:"10"}}
             />
           </Box>
         </Flex>
@@ -49,7 +47,7 @@ const BookBanner = () => {
         position="absolute"
         top="0"
         w="100%"
-        h={{ base: "340px", sm: "320px", md: "400px", lg: "430px" }}
+        h={{ base: "500px", sm: "420px", md: "400px", lg: "430px" }}
         opacity="0.2"
       />
     </Box>
