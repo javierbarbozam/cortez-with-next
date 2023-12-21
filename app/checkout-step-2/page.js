@@ -1,13 +1,12 @@
 "use server"
 
 import { OnvoPayment } from '../components/OnvoPayment';
-import { useRouter } from 'next/navigation';
 
 import axios from 'axios';
 
-export default async function Onvo() {
-  const router = useRouter();
-  async function getPaymentIntent(amount = 100000, description = 'my first payment intent 3') {
+export default async function Onvo({ searchParams }) {
+  // Book price is harcoded, this needs needs more integration with Onvo API
+  async function getPaymentIntent(amount = 2100000, description = 'my first payment intent 3') {
     const { data, status } = await axios.post('https://api.onvopay.com/v1/payment-intents',
       {
         currency: 'CRC',
@@ -21,10 +20,6 @@ export default async function Onvo() {
       },
     );
 
-    if (status == 201) {
-      router.push('/pago-confirmado');
-    }
-
     return data.id;
 
   }
@@ -33,7 +28,7 @@ export default async function Onvo() {
 
   return (
     <>
-      <OnvoPayment id={paymentIntentId} />
+      <OnvoPayment customerId={searchParams.customerId} id={paymentIntentId} />
     </>
   )
 }

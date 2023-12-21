@@ -1,52 +1,56 @@
-import {CreateClient} from '../components/CreateClient'
+import { redirect } from 'next/navigation';
+import { CreateClient } from '../components/CreateClient';
 
-const dummyClient = {
-  "address": {
-    "city": "San José",
-    "country": "CR",
-    "line1": null,
-    "line2": null,
-    "postalCode": "10101",
-    "state": "San José"
-  },
-  "description": "Cliente de prueba",
-  "email": "test_customer@onvopay.com",
-  "name": "John Doe",
-  "phone": "+50688880000",
-  "shipping": {
-    "address": {
-      "city": null,
-      "country": "CR",
-      "line1": null,
-      "line2": null,
-      "postalCode": null,
-      "state": null
-    },
-    "name": "John Doe",
-    "phone": null
-  }
-}
+export default async function CheckoutStep1({ searchParams }) {
 
-export default function CheckoutStep1({ searchParams }) {
-  async function createCustomer() {
-    'use server'
-    console.log('createCustomer')
-    fetch('https://api.onvopay.com/v1/customers', {
+  async function createCustomer(formData) {
+    'use server';
+
+    const rawFormData = {
+      address: {
+        city: formData.get('address.city'),
+        country: formData.get('address.country'),
+        line1: formData.get('address.line1'),
+        line2: formData.get('address.line2'),
+        postalCode: formData.get('address.postalCode'),
+        state: formData.get('address.state'),
+      },
+      description: formData.get('description'),
+      email: formData.get('email'),
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      shipping: {
+        address: {
+          city: formData.get('shipping.address.city'),
+          country: formData.get('shipping.address.country'),
+          line1: formData.get('shipping.address.line1'),
+          line2: formData.get('shipping.address.line2'),
+          postalCode: formData.get('shipping.address.postalCode'),
+          state: formData.get('shipping.address.state'),
+        },
+        name: formData.get('shipping.name'),
+        phone: formData.get('shipping.phone'),
+      },
+    };
+
+    const { id } = await fetch('https://api.onvopay.com/v1/customers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ONVO_TOKEN_SECRET}`
+        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ONVO_TOKEN_SECRET}`,
       },
-      body: JSON.stringify(dummyClient)
-    }).then((res) => res.json()).then((data) => {
-      console.log(data)
-    })
+      body: JSON.stringify(rawFormData),
+    }).then((res) => res.json());
+
+    redirect(`/checkout-step-2?customerId=${id}`);
   }
 
+  console.log(searchParams.id);
 
-  return <>
-    <h1>Checkout 1</h1>
-    <CreateClient createCustomer={createCustomer} />
-    
-  </>
+  return (
+    <>
+      <h1>Checkout 1</h1>
+      <CreateClient createCustomer={createCustomer} />
+    </>
+  );
 }

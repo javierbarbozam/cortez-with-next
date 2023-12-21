@@ -1,18 +1,16 @@
 "use client"
 
 import { useEffect, useRef } from 'react';
-import Script from 'next/script';
-import { useRouter } from 'next/router';
+import { redirect } from 'next/navigation';
 
-export function OnvoPayment({ id }) {
+export function OnvoPayment({ id, customerId }) {
   const onvoRef = useRef(null);
-  const router = useRouter();
 
   useEffect(() => {
     (async () => {
-      createSDKInstance(id, "one_time");
+      createSDKInstance(id, "one_time", customerId);
     })();
-  }, [id]);
+  }, [id, customerId]);
 
   const createSDKInstance = (id, paymentType = null, customerId = null) => {
     onvoRef.current?.close(); // Destroy the previous instance
@@ -22,7 +20,7 @@ export function OnvoPayment({ id }) {
       paymentType: paymentType,
       onSuccess: (data) => {
         console.log('success', data);
-        router.push('/pago-confirmado')
+        redirect('/pago-confirmado')
       },
       onError: (error) => {
         console.log('error', error);
@@ -38,7 +36,6 @@ export function OnvoPayment({ id }) {
 
   return (
     <>
-      <Script src="https://sdk.onvopay.com/sdk.js" strategy="beforeInteractive" />
       <div id="sdk-container" style={{ height: 600 }} />
     </>
   )
