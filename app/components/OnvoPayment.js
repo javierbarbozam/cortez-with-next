@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect, useRef } from 'react';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export function OnvoPayment({ id, customerId }) {
+  const router = useRouter()
   const onvoRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export function OnvoPayment({ id, customerId }) {
       paymentType: paymentType,
       onSuccess: (data) => {
         console.log('success', data);
-        redirect('/pago-confirmado')
+        router.push('/pago-confirmado')
       },
       onError: (error) => {
         console.log('error', error);
