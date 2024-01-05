@@ -34,7 +34,7 @@ export function OnvoPayment({ id, customerId }) {
     (async () => {
       createSDKInstance(id, "one_time", customerId);
     })(id, customerId);
-  }, [id, customerId, router]); // Agregar router al array de dependencias
+  }, [id, customerId, router]);
 
   return (
     <>
