@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { CheckoutForm } from './CheckoutForm';
 
 export const CreateClient = ({ createCustomer }) => {
   const [formData, setFormData] = useState({
@@ -49,6 +50,7 @@ export const CreateClient = ({ createCustomer }) => {
   };
 
   return (
+    // <CheckoutForm formData={formData} onSubmit={createCustomer} handleChange={handleChange}/>
     <form action={createCustomer}>
       <h2>Customer Form</h2>
 
