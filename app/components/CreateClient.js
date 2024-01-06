@@ -50,7 +50,8 @@ export const CreateClient = ({ createCustomer }) => {
   };
 
   return (
-    // <CheckoutForm formData={formData} onSubmit={createCustomer} handleChange={handleChange}/>
+    <>
+    <CheckoutForm formData={formData} action={createCustomer} handleChange={handleChange}/>
     <form action={createCustomer}>
       <h2>Customer Form</h2>
 
@@ -167,5 +168,6 @@ export const CreateClient = ({ createCustomer }) => {
 
       <button type="submit">Submit</button>
     </form>
+    </>
   );
 };
