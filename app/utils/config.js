@@ -31,7 +31,7 @@ const MethodCta = () => (
   </Link>
 );
 
-const BuyBtn = (price) => (
+const BuyBtn = () => (
   <Link variant="yellowBg" as={NextLink} href="/checkout-step-1">
     ¡compralo ahora!
   </Link>
