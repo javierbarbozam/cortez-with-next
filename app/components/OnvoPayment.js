@@ -18,7 +18,6 @@ export function OnvoPayment({ id, customerId }) {
           router.push("/pago-confirmado");
         },
         onError: (error) => {
-          router.push("/");
           alert("El pago no pudo ser realizado, por favor intente de nuevo.");
           console.log("error", error);
         },
