@@ -99,6 +99,18 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               ></Input>
             </Box>
             <Box {...margin}>
+              <FormLabel htmlFor="address.country">País</FormLabel>
+              <Input
+                type="text"
+                id="address.country"
+                name="address.country"
+                bgColor="#E1ECEC"
+                value={formData.address.country}
+                onChange={handleChange}
+                placeholder="Nombre de ciudad o barrio"
+              ></Input>
+            </Box>
+            <Box {...margin}>
               <FormLabel htmlFor="address.line1">Dirección</FormLabel>
               <Input
                 type="text"
@@ -160,7 +172,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
             </Box>
             <Box {...margin}>
               <FormLabel htmlFor="shipping.address.country">
-                Shipping Address
+                País
               </FormLabel>
               <Input
                 type="text"
@@ -168,6 +180,32 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                 name="shipping.address.country"
                 bgColor="#E1ECEC"
                 value={formData.shipping.address.country}
+                onChange={handleChange}
+              ></Input>
+            </Box>
+            <Box {...margin}>
+              <FormLabel htmlFor="shipping.address.state">
+                Provincia
+              </FormLabel>
+              <Input
+                type="text"
+                id="shipping.address.state"
+                name="shipping.address.state"
+                bgColor="#E1ECEC"
+                value={formData.shipping.address.state}
+                onChange={handleChange}
+              ></Input>
+            </Box>
+            <Box {...margin}>
+              <FormLabel htmlFor="shipping.address.city">
+                Ciudad
+              </FormLabel>
+              <Input
+                type="text"
+                id="shipping.address.city"
+                name="shipping.address.city"
+                bgColor="#E1ECEC"
+                value={formData.shipping.address.city}
                 onChange={handleChange}
               ></Input>
             </Box>
@@ -207,13 +245,28 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               ></Input>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.state">state</FormLabel>
+              <FormLabel htmlFor="shipping.name">
+                Nombre
+              </FormLabel>
               <Input
                 type="text"
-                id="shipping.address.state"
-                name="shipping.address.state"
+                id="shipping.name"
+                name="shipping.name"
                 bgColor="#E1ECEC"
-                value={formData.shipping.address.state}
+                value={formData.shipping.name}
+                onChange={handleChange}
+              ></Input>
+            </Box>
+            <Box {...margin}>
+              <FormLabel htmlFor="shipping.phone">
+                Teléfono
+              </FormLabel>
+              <Input
+                type="text"
+                id="shipping.phone"
+                name="shipping.phone"
+                bgColor="#E1ECEC"
+                value={formData.shipping.phone}
                 onChange={handleChange}
               ></Input>
             </Box>

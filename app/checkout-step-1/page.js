@@ -23,10 +23,10 @@ export default async function CheckoutStep1({ searchParams }) {
         address: {
           city: formData.get('shipping.address.city'),
           country: formData.get('shipping.address.country'),
+          state: formData.get('shipping.address.state'),
           line1: formData.get('shipping.address.line1'),
           line2: formData.get('shipping.address.line2'),
           postalCode: formData.get('shipping.address.postalCode'),
-          state: formData.get('shipping.address.state'),
         },
         name: formData.get('shipping.name'),
         phone: formData.get('shipping.phone'),
@@ -44,8 +44,6 @@ export default async function CheckoutStep1({ searchParams }) {
 
     redirect(`/checkout-step-2?customerId=${id}`);
   }
-
-  console.log(searchParams.id);
 
   return (
     <>
