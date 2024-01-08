@@ -22,252 +22,196 @@ const margin = {
   },
 };
 
-export const CheckoutForm = ({ formData, action, handleChange }) => {
+const formLabels = {
+  name: "Nombre completo",
+  email: "Correo electrónico",
+  phone: "Número de teléfono",
+  description: "Detalles de la compra",
+  "address.city": "Nombre de ciudad",
+  "address.line1": "Dirección",
+  "address.line2": "Dirección exacta",
+  "address.postalCode": "Código postal",
+  "address.state": "Provincia",
+  "shipping.address.state": "Provincia",
+  "shipping.address.city": "Nombre de la ciudad",
+  "shipping.address.line1": "Dirección",
+  "shipping.address.line2": "Dirección exacta",
+  "shipping.address.postalCode": "Código postal",
+  "shipping.name": "Nombre de quien recibe el pedido",
+  "shipping.phone": "Teléfono de quien recibe el pedido",
+};
+
+const FormTitle = ({ title }) => (
+  <Box {...margin}>
+    <Heading align="center" size="md" textAlign="left">
+      {title}
+    </Heading>
+  </Box>
+);
+
+const FormInput = ({ name, placeholder, autoComplete }) => (
+  <Box {...margin}>
+    <FormLabel htmlFor={name}>{formLabels[name]}</FormLabel>
+    <Input
+      type="text"
+      id={name}
+      name={name}
+      bgColor="#E1ECEC"
+      placeholder={placeholder}
+      autoComplete={autoComplete}
+    ></Input>
+  </Box>
+);
+
+const FormTextArea = ({ name, placeholder }) => (
+  <Box {...margin}>
+    <FormLabel htmlFor={name}>{formLabels[name]}</FormLabel>
+    <Textarea
+      id={name}
+      name={name}
+      bgColor="#E1ECEC"
+      placeholder={placeholder}
+    ></Textarea>
+  </Box>
+);
+
+const FormSelect = ({ name, placeholder, options }) => (
+  <Box {...margin}>
+    <FormLabel htmlFor={name}>{formLabels[name]}</FormLabel>
+    <Select
+      name={name}
+      id={name}
+      bgColor="#E1ECEC"
+      placeholder={placeholder}
+    >
+      {options.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </Select>
+  </Box>
+);
+
+export const CheckoutForm = ({ action }) => {
   const [showShippingFields, setShowShippingFields] = useState(false);
+
   const handleCheckboxChange = () => {
     setShowShippingFields(!showShippingFields);
   };
+
   return (
     <Card w="100%" p={{ base: "24px", md: "40px" }}>
       <Box w={{ sm: "400px", md: "570px" }} m="auto">
-        <form action={action} method="post">
-          <FormControl mt={{ base: "30px", md: "40px" }}>
+        <form action={action}>
+          <FormControl mt={{ base: "30px", md: "40px" }} isRequired>
             <Box {...margin}>
               <Heading align="center" size="md" textAlign="left">
                 Datos personales
               </Heading>
             </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="name">Nombre completo</FormLabel>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                bgColor="#E1ECEC"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Escribí tu nombre"
-                autoComplete="name"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="email">Correo electrónico</FormLabel>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                bgColor="#E1ECEC"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Escribí tu correo"
-                autoComplete="email"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="phone">Número de teléfono</FormLabel>
-              <Input
-                type="text"
-                id="phone"
-                name="phone"
-                bgColor="#E1ECEC"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Ej: 80808080"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="description">Detalles de la compra</FormLabel>
-              <Textarea
-                id="description"
+            <FormInput
+              name="name"
+              placeholder="Escribí tu nombre"
+              autoComplete="name"
+            />
+            <FormInput
+              name="email"
+              placeholder="Escribí tu correo electrónico"
+              autoComplete="email"
+            />
+            <FormInput
+              name="phone"
+              placeholder="Escribí tu número telefónico"
+              autoComplete="phone"
+            />
+            <FormControl>
+              <FormTextArea
                 name="description"
-                bgColor="#E1ECEC"
-                onChange={handleChange}
-                value={formData.description}
-                placeholder="Agrega información relevante sobre el pedido"
-              ></Textarea>
-            </Box>
-            <Box {...margin}>
-              <Heading align="center" size="md" textAlign="left">
-                Dirección
-              </Heading>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.city">Ciudad</FormLabel>
-              <Input
-                type="text"
-                id="address.city"
-                name="address.city"
-                bgColor="#E1ECEC"
-                value={formData.address.city}
-                onChange={handleChange}
-                placeholder="Nombre de ciudad o barrio"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.line1">Dirección</FormLabel>
-              <Input
-                type="text"
-                id="address.line1"
-                name="address.line1"
-                bgColor="#E1ECEC"
-                value={formData.address.line1}
-                onChange={handleChange}
-                placeholder="Calle, nombre de empresa u otro."
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.line2">Dirección exacta</FormLabel>
-              <Input
-                type="text"
-                id="address.line2"
-                name="address.line2"
-                bgColor="#E1ECEC"
-                value={formData.address.line2}
-                onChange={handleChange}
-                placeholder="Número de casa u otras señas."
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.postalCode">Código postal</FormLabel>
-              <Input
-                type="text"
-                id="address.postalCode"
-                name="address.postalCode"
-                bgColor="#E1ECEC"
-                value={formData.address.postalCode}
-                onChange={handleChange}
-                placeholder="Ej: 11104"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.state">Provincia</FormLabel>
-              <Select
-                name="address.state"
-                id="address.state"
-                bgColor="#E1ECEC"
-                placeholder="Selecciona una provincia"
-                value={formData.address.state}
-                onChange={handleChange}
-              >
-                <option value="San José">San José</option>
-                <option value="Alajuela">Alajuela</option>
-                <option value="Limón">Limón</option>
-                <option value="Guanacaste">Guanacaste</option>
-                <option value="Cartago">Cartago</option>
-                <option value="Heredia">Heredia</option>
-                <option value="Puntarenas">Puntarenas</option>
-              </Select>
-            </Box>
-            <Box {...margin}>
-              <Checkbox
-                onChange={handleCheckboxChange}
-                isChecked={showShippingFields}
-              >
-                Mi dirección de envío es diferente a mi residencia
-              </Checkbox>
-            </Box>
+                placeholder="Agregá información relevante sobre el pedido"
+              />
+            </FormControl>
+            <FormTitle title="Dirección" />
+            <FormInput
+              name="address.city"
+              placeholder="Nombre de ciudad o barrio."
+            />
+            <FormInput
+              name="address.line1"
+              placeholder="Calle, nombre de empresa u otro."
+            />
+            <FormInput
+              name="address.line2"
+              placeholder="Número de casa u otras señas."
+            />
+            <FormInput name="address.postalCode" placeholder="Ej: 11104" />
+            <FormSelect
+              name="address.state"
+              placeholder="Seleccioná una provincia"
+              options={[
+                "San José",
+                "Alajuela",
+                "Limón",
+                "Guanacaste",
+                "Cartago",
+                "Heredia",
+                "Puntarenas",
+              ]}
+            />
+            <FormControl>
+              <Box {...margin}>
+                <Checkbox
+                  onChange={handleCheckboxChange}
+                  isChecked={showShippingFields}
+                >
+                  Mi dirección de envío es diferente a mi residencia
+                </Checkbox>
+              </Box>
+            </FormControl>
             {showShippingFields && (
               <Box {...margin}>
-                <Box {...margin}>
-                  <Heading align="center" size="md" textAlign="left">
-                    Datos de envío
-                  </Heading>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.state">
-                    Provincia
-                  </FormLabel>
-                  <Select
-                    name="shipping.address.state"
-                    id="shipping.address.state"
-                    bgColor="#E1ECEC"
-                    placeholder="Selecciona una provincia"
-                    value={formData.shipping.address.state}
-                    onChange={handleChange}
-                  >
-                    <option value="San José">San José</option>
-                    <option value="Alajuela">Alajuela</option>
-                    <option value="Limón">Limón</option>
-                    <option value="Guanacaste">Guanacaste</option>
-                    <option value="Cartago">Cartago</option>
-                    <option value="Heredia">Heredia</option>
-                    <option value="Puntarenas">Puntarenas</option>
-                  </Select>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.city">Ciudad</FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.address.city"
-                    name="shipping.address.city"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.address.city}
-                    onChange={handleChange}
-                    placeholder="Nombre de ciudad o barrio"
-                  ></Input>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.line1">Dirección</FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.address.line1"
-                    name="shipping.address.line1"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.address.line1}
-                    onChange={handleChange}
-                    placeholder="Calle, nombre de empresa u otro."
-                  ></Input>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.line2">Dirección exacta</FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.address.line2"
-                    name="shipping.address.line2"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.address.line2}
-                    onChange={handleChange}
-                    placeholder="Número de casa u otras señas"
-                  ></Input>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.postalCode">
-                    Código postal
-                  </FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.address.postalCode"
-                    name="shipping.address.postalCode"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.address.postalCode}
-                    onChange={handleChange}
-                    placeholder="Ej: 11104"
-                  ></Input>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.name">Nombre de la persona que recibe el pedido</FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.name"
+                <FormTitle title="Datos de envío" />
+                <FormControl>
+                  <FormInput
                     name="shipping.name"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.name}
-                    onChange={handleChange}
-                    placeholder="Escribí un nombre"
-                  ></Input>
-                </Box>
-                <Box {...margin}>
-                  <FormLabel htmlFor="shipping.phone">Teléfono de la persona que recibe el pedido</FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.phone"
+                    placeholder="Escribí tu nombre"
+                    autoComplete="name"
+                  />
+                  <FormInput
                     name="shipping.phone"
-                    bgColor="#E1ECEC"
-                    value={formData.shipping.phone}
-                    onChange={handleChange}
-                    placeholder="El: 80808080"
-                  ></Input>
-                </Box>
+                    placeholder="Escribí tu número telefónico"
+                    autoComplete="phone"
+                  />
+                </FormControl>
+                <FormSelect
+                  name="shipping.address.state"
+                  placeholder="Seleccioná una provincia"
+                  options={[
+                    "San José",
+                    "Alajuela",
+                    "Limón",
+                    "Guanacaste",
+                    "Cartago",
+                    "Heredia",
+                    "Puntarenas",
+                  ]}
+                />
+                <FormInput
+                  name="shipping.address.city"
+                  placeholder="Nombre de ciudad o barrio"
+                />
+                <FormInput
+                  name="shipping.address.line1"
+                  placeholder="Calle, nombre de la empresa u otro."
+                />
+                <FormInput
+                  name="shipping.address.line2"
+                  placeholder="Número de casa u otras señas."
+                />
+                <FormInput
+                  name="shipping.address.postalCode"
+                  placeholder="Ej: 11104"
+                />
               </Box>
             )}
             <Flex justifyContent="center">
