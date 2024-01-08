@@ -32,7 +32,7 @@ export default async function CheckoutStep1() {
           : formData.get("name"),
         phone: formData.get("shipping.phone")
           ? "+506" + formData.get("shipping.phone")
-          : null,
+          : "+506" + formData.get("phone"),
       },
     };
 
