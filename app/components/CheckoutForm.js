@@ -11,7 +11,9 @@ import {
   Flex,
   Box,
   Select,
+  Checkbox,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 const margin = {
   mb: {
@@ -21,6 +23,10 @@ const margin = {
 };
 
 export const CheckoutForm = ({ formData, action, handleChange }) => {
+  const [showShippingFields, setShowShippingFields] = useState(false);
+  const handleCheckboxChange = () => {
+    setShowShippingFields(!showShippingFields);
+  };
   return (
     <Card w="100%" p={{ base: "24px", md: "40px" }}>
       <Box w={{ sm: "400px", md: "570px" }} m="auto">
@@ -81,7 +87,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
             </Box>
             <Box {...margin}>
               <Heading align="center" size="md" textAlign="left">
-                Datos de envío
+                Dirección
               </Heading>
             </Box>
             <Box {...margin}>
@@ -152,89 +158,103 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               </Select>
             </Box>
             <Box {...margin}>
-              <Heading align="center" size="md" textAlign="left">
-                Address Shipping
-              </Heading>
+              <Checkbox
+                onChange={handleCheckboxChange}
+                isChecked={showShippingFields}
+              >
+                Mi dirección de envío es diferente a mi residencia
+              </Checkbox>
             </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.state">Provincia</FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.state"
-                name="shipping.address.state"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.state}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.city">Ciudad</FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.city"
-                name="shipping.address.city"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.city}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.line1">Line 1</FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.line1"
-                name="shipping.address.line1"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.line1}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.line2">Line 2</FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.line2"
-                name="shipping.address.line2"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.line2}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.postalCode">
-                postalCode
-              </FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.postalCode"
-                name="shipping.address.postalCode"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.postalCode}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.name">Nombre</FormLabel>
-              <Input
-                type="text"
-                id="shipping.name"
-                name="shipping.name"
-                bgColor="#E1ECEC"
-                value={formData.shipping.name}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.phone">Teléfono</FormLabel>
-              <Input
-                type="text"
-                id="shipping.phone"
-                name="shipping.phone"
-                bgColor="#E1ECEC"
-                value={formData.shipping.phone}
-                onChange={handleChange}
-              ></Input>
-            </Box>
+            {showShippingFields && (
+              <Box {...margin}>
+                <Box {...margin}>
+                  <Heading align="center" size="md" textAlign="left">
+                    Datos de envío
+                  </Heading>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.address.state">
+                    Provincia
+                  </FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.address.state"
+                    name="shipping.address.state"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.address.state}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.address.city">Ciudad</FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.address.city"
+                    name="shipping.address.city"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.address.city}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.address.line1">Line 1</FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.address.line1"
+                    name="shipping.address.line1"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.address.line1}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.address.line2">Line 2</FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.address.line2"
+                    name="shipping.address.line2"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.address.line2}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.address.postalCode">
+                    postalCode
+                  </FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.address.postalCode"
+                    name="shipping.address.postalCode"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.address.postalCode}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.name">Nombre</FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.name"
+                    name="shipping.name"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.name}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+                <Box {...margin}>
+                  <FormLabel htmlFor="shipping.phone">Teléfono</FormLabel>
+                  <Input
+                    type="text"
+                    id="shipping.phone"
+                    name="shipping.phone"
+                    bgColor="#E1ECEC"
+                    value={formData.shipping.phone}
+                    onChange={handleChange}
+                  ></Input>
+                </Box>
+              </Box>
+            )}
             <Flex justifyContent="center">
               <Button type="submit" mt="16px">
                 Confirmar datos
