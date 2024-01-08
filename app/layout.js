@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 
 import { Providers } from "./providers";
 import { Header } from "./components/header/Header";
