@@ -10,10 +10,8 @@ import {
   Card,
   Flex,
   Box,
-  Text,
   Select,
 } from "@chakra-ui/react";
-import { useState } from "react";
 
 const margin = {
   mb: {
@@ -26,7 +24,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
   return (
     <Card w="100%" p={{ base: "24px", md: "40px" }}>
       <Box w={{ sm: "400px", md: "570px" }} m="auto">
-        <form action={action} method='post'>
+        <form action={action} method="post">
           <FormControl mt={{ base: "30px", md: "40px" }}>
             <Box {...margin}>
               <Heading align="center" size="md" textAlign="left">
@@ -68,7 +66,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                 bgColor="#E1ECEC"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Ej: +50680808080"
+                placeholder="Ej: 80808080"
               ></Input>
             </Box>
             <Box {...margin}>
@@ -94,18 +92,6 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                 name="address.city"
                 bgColor="#E1ECEC"
                 value={formData.address.city}
-                onChange={handleChange}
-                placeholder="Nombre de ciudad o barrio"
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="address.country">País</FormLabel>
-              <Input
-                type="text"
-                id="address.country"
-                name="address.country"
-                bgColor="#E1ECEC"
-                value={formData.address.country}
                 onChange={handleChange}
                 placeholder="Nombre de ciudad o barrio"
               ></Input>
@@ -171,22 +157,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               </Heading>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.country">
-                País
-              </FormLabel>
-              <Input
-                type="text"
-                id="shipping.address.country"
-                name="shipping.address.country"
-                bgColor="#E1ECEC"
-                value={formData.shipping.address.country}
-                onChange={handleChange}
-              ></Input>
-            </Box>
-            <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.state">
-                Provincia
-              </FormLabel>
+              <FormLabel htmlFor="shipping.address.state">Provincia</FormLabel>
               <Input
                 type="text"
                 id="shipping.address.state"
@@ -197,9 +168,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               ></Input>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="shipping.address.city">
-                Ciudad
-              </FormLabel>
+              <FormLabel htmlFor="shipping.address.city">Ciudad</FormLabel>
               <Input
                 type="text"
                 id="shipping.address.city"
@@ -245,9 +214,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               ></Input>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="shipping.name">
-                Nombre
-              </FormLabel>
+              <FormLabel htmlFor="shipping.name">Nombre</FormLabel>
               <Input
                 type="text"
                 id="shipping.name"
@@ -258,9 +225,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               ></Input>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="shipping.phone">
-                Teléfono
-              </FormLabel>
+              <FormLabel htmlFor="shipping.phone">Teléfono</FormLabel>
               <Input
                 type="text"
                 id="shipping.phone"
