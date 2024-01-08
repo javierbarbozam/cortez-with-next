@@ -32,7 +32,7 @@ const MethodCta = () => (
 );
 
 const BuyBtn = () => (
-  <Link variant="yellowBg" as={NextLink} href="">
+  <Link variant="yellowBg" as={NextLink} href="/checkout-step-1">
     ¡compralo ahora!
   </Link>
 );

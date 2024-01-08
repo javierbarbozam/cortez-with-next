@@ -15,7 +15,6 @@ import { toggleBodyOverflow } from "../../utils/toggleBodyOverflow";
 import { usePathname } from "next/navigation";
 
 const NavBar = ({ displayType, spacing = "0" }) => {
-
   const pathname = usePathname();
 
   return (

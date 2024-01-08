@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
+
 import { Providers } from "./providers";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/Footer";
 import { Box } from "@chakra-ui/react";
+import Script from 'next/script';
 
 export const metadata = {
   title: "Cortez Amarillo",
@@ -12,6 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+      <Script src="https://sdk.onvopay.com/sdk.js" strategy="beforeInteractive" />
+
         <Providers>
           <Box height="100vh" display="flex" flexDirection="column" justifyContent="space-between">
             <Header />
