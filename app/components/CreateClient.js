@@ -1,39 +1,37 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { CheckoutForm } from './CheckoutForm';
+import React, { useState } from "react";
+import { CheckoutForm } from "./CheckoutForm";
 
 export const CreateClient = ({ createCustomer }) => {
   const [formData, setFormData] = useState({
     address: {
-      city: 'San José',
-      country: 'CR',
-      line1: 'line1',
-      line2: 'line2',
-      postalCode: '10101',
-      state: 'San José',
+      city: null,
+      line1: null,
+      line2: null,
+      postalCode: null,
+      state: null,
     },
-    description: 'Cliente de prueba',
-    email: 'test_customer@onvopay.com',
-    name: 'John Doe',
-    phone: '+50688880000',
+    description: null,
+    email: null,
+    name: null,
+    phone: null,
     shipping: {
       address: {
-        city: 'city',
-        country: 'CR',
-        line1: 'line1',
-        line2: 'line2',
-        postalCode: 'postalCode',
-        state: 'state',
+        city: null,
+        line1: null,
+        line2: null,
+        postalCode: null,
+        state: null,
       },
-      name: 'John Doe',
-      phone: '+50688880000',
+      name: "",
+      phone: null,
     },
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const keys = name.split('.');
+    const keys = name.split(".");
     let data = formData;
 
     keys.reduce((acc, key, index) => {
@@ -50,6 +48,10 @@ export const CreateClient = ({ createCustomer }) => {
   };
 
   return (
-    <CheckoutForm formData={formData} action={createCustomer} handleChange={handleChange}/>
+    <CheckoutForm
+      formData={formData}
+      action={createCustomer}
+      handleChange={handleChange}
+    />
   );
 };
