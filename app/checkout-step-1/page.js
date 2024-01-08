@@ -35,6 +35,7 @@ export default async function CheckoutStep1() {
           : "+506" + formData.get("phone"),
       },
     };
+    
 
     const clientData = await fetch("https://api.onvopay.com/v1/customers", {
       method: "POST",
