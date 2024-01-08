@@ -83,6 +83,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                 bgColor="#E1ECEC"
                 onChange={handleChange}
                 value={formData.description}
+                placeholder="Agrega información relevante sobre el pedido"
               ></Textarea>
             </Box>
             <Box {...margin}>
@@ -91,7 +92,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
               </Heading>
             </Box>
             <Box {...margin}>
-              <FormLabel htmlFor="address.city">Nombre de ciudad</FormLabel>
+              <FormLabel htmlFor="address.city">Ciudad</FormLabel>
               <Input
                 type="text"
                 id="address.city"
@@ -176,14 +177,22 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                   <FormLabel htmlFor="shipping.address.state">
                     Provincia
                   </FormLabel>
-                  <Input
-                    type="text"
-                    id="shipping.address.state"
+                  <Select
                     name="shipping.address.state"
+                    id="shipping.address.state"
                     bgColor="#E1ECEC"
+                    placeholder="Selecciona una provincia"
                     value={formData.shipping.address.state}
                     onChange={handleChange}
-                  ></Input>
+                  >
+                    <option value="San José">San José</option>
+                    <option value="Alajuela">Alajuela</option>
+                    <option value="Limón">Limón</option>
+                    <option value="Guanacaste">Guanacaste</option>
+                    <option value="Cartago">Cartago</option>
+                    <option value="Heredia">Heredia</option>
+                    <option value="Puntarenas">Puntarenas</option>
+                  </Select>
                 </Box>
                 <Box {...margin}>
                   <FormLabel htmlFor="shipping.address.city">Ciudad</FormLabel>
@@ -194,10 +203,11 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.address.city}
                     onChange={handleChange}
+                    placeholder="Nombre de ciudad o barrio"
                   ></Input>
                 </Box>
                 <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.line1">Line 1</FormLabel>
+                  <FormLabel htmlFor="shipping.address.line1">Dirección</FormLabel>
                   <Input
                     type="text"
                     id="shipping.address.line1"
@@ -205,10 +215,11 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.address.line1}
                     onChange={handleChange}
+                    placeholder="Calle, nombre de empresa u otro."
                   ></Input>
                 </Box>
                 <Box {...margin}>
-                  <FormLabel htmlFor="shipping.address.line2">Line 2</FormLabel>
+                  <FormLabel htmlFor="shipping.address.line2">Dirección exacta</FormLabel>
                   <Input
                     type="text"
                     id="shipping.address.line2"
@@ -216,11 +227,12 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.address.line2}
                     onChange={handleChange}
+                    placeholder="Número de casa u otras señas"
                   ></Input>
                 </Box>
                 <Box {...margin}>
                   <FormLabel htmlFor="shipping.address.postalCode">
-                    postalCode
+                    Código postal
                   </FormLabel>
                   <Input
                     type="text"
@@ -229,10 +241,11 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.address.postalCode}
                     onChange={handleChange}
+                    placeholder="Ej: 11104"
                   ></Input>
                 </Box>
                 <Box {...margin}>
-                  <FormLabel htmlFor="shipping.name">Nombre</FormLabel>
+                  <FormLabel htmlFor="shipping.name">Nombre de la persona que recibe el pedido</FormLabel>
                   <Input
                     type="text"
                     id="shipping.name"
@@ -240,10 +253,11 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.name}
                     onChange={handleChange}
+                    placeholder="Escribí un nombre"
                   ></Input>
                 </Box>
                 <Box {...margin}>
-                  <FormLabel htmlFor="shipping.phone">Teléfono</FormLabel>
+                  <FormLabel htmlFor="shipping.phone">Teléfono de la persona que recibe el pedido</FormLabel>
                   <Input
                     type="text"
                     id="shipping.phone"
@@ -251,6 +265,7 @@ export const CheckoutForm = ({ formData, action, handleChange }) => {
                     bgColor="#E1ECEC"
                     value={formData.shipping.phone}
                     onChange={handleChange}
+                    placeholder="El: 80808080"
                   ></Input>
                 </Box>
               </Box>
