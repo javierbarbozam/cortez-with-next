@@ -1,13 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
-import { colors } from "./theme/foundations/colors";
-import { fonts } from "./theme/foundations/fonts";
-import { Button } from "./theme/components/Button";
-import { Heading } from "./theme/components/Heading";
-import { tabsVariants } from "./theme/components/Tabs";
-import { linkVariants } from "./theme/components/Link";
-import { card } from "./theme/components/Card";
-import { containerTheme } from './theme/components/Container';
-import { modalTheme } from "./theme/components/Modal";
+import { colors } from "./foundations/colors";
+import { fonts } from "./foundations/fonts";
+import { Button } from "./components/Button";
+import { Heading } from "./components/Heading";
+import { tabsVariants } from "./components/Tabs";
+import { linkVariants } from "./components/Link";
+import { card } from "./components/Card";
+import { containerTheme } from './components/Container';
+import { modalTheme } from "./components/Modal";
 
 export const theme = extendTheme({
   colors,
