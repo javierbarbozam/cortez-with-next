@@ -5,7 +5,7 @@ const headerLink = defineStyle({
   color: 'white',
   _disabled: {
     color: "secondary.normal",
-    cursor: "not-allowed"
+    pointerEvents: "none"
   }
 });
 
