@@ -32,8 +32,8 @@ const MethodCta = () => (
 );
 
 const BuyBtn = () => (
-  <Link variant="yellowBg" as={NextLink} href="/checkout-step-1">
-    ¡compralo ahora!
+  <Link variant="yellowBg" href="https://wa.me/50688381532" isExternal>
+    ¡comprálo ahora!
   </Link>
 );
 
@@ -70,7 +70,7 @@ export const pagesData = {
     about: {
       title: "¿Quiénes somos?",
       description:
-        "CortezAmarillo es una empresa costarricense de innovación en el ámbito de la educación, específicamente para brindar alternativas de lectura en etapas tempranas de aprendizaje, que combine lectura tradicional con herramientas tecnológicas para lograr un vínculo emocional y una experiencia más divertida.",
+        "Cortez Amarillo es una empresa costarricense de innovación en el ámbito de la educación, específicamente para brindar alternativas de lectura en etapas tempranas de aprendizaje, que combine lectura tradicional con herramientas tecnológicas para lograr un vínculo emocional y una experiencia más divertida.",
     },
     learningMethod: {
       title: "Explora nuestro método de enseñanza",
@@ -124,7 +124,7 @@ export const pagesData = {
     title: "Descarga nuestra app",
     media: <ImageComponent source={appImg} />,
     description:
-      "Sumérgete en el mundo colorido de los animales costarricenses con nuestra aplicación, la cual fusiona la lectura con innovación tecnológica para una experiencia educativa única.",
+      "Sumergite en el mundo colorido de los animales costarricenses con nuestra app, la cual fusiona la lectura con innovación tecnológica para una experiencia educativa única.",
     cta: [<AppStoreLink key={0} />, <GooglePlayLink key={1} />],
   },
 };
